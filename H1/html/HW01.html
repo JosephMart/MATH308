@@ -1,0 +1,597 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+    <title>Problem Set A by Joseph Michael Martinsen</title>
+    <meta name="generator" content="MATLAB 9.1">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2017-02-04">
+    <meta name="DC.source" content="HW01.m">
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        :focus {
+            outine: 0
+        }
+
+        ins {
+            text-decoration: none
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html {
+            min-height: 100%;
+            margin-bottom: 1px;
+        }
+
+        html body {
+            height: 100%;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #000;
+            line-height: 140%;
+            background: #fff none;
+            overflow-y: scroll;
+        }
+
+        html body td {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        h1 {
+            padding: 0px;
+            margin: 0px 0px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: #d55000;
+            line-height: 100%;
+            font-weight: normal;
+        }
+
+        h2 {
+            padding: 0px;
+            margin: 0px 0px 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+            border-bottom: 1px solid #d6d4d4;
+            display: block;
+        }
+
+        h3 {
+            padding: 0px;
+            margin: 0px 0px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+        }
+
+        a {
+            color: #005fce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005fce;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #004aa0;
+            text-decoration: none;
+        }
+
+        p {
+            padding: 0px;
+            margin: 0px 0px 20px;
+        }
+
+        img {
+            padding: 0px;
+            margin: 0px 0px 20px;
+            border: none;
+        }
+
+        p img,
+        pre img,
+        tt img,
+        li img,
+        h1 img,
+        h2 img {
+            margin-bottom: 0px;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px 0px 20px 23px;
+            list-style: square;
+        }
+
+        ul li {
+            padding: 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ul li ul {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 23px;
+        }
+
+        ul li ol li {
+            list-style: decimal;
+        }
+
+        ol {
+            padding: 0px;
+            margin: 0px 0px 20px 0px;
+            list-style: decimal;
+        }
+
+        ol li {
+            padding: 0px;
+            margin: 0px 0px 7px 23px;
+            list-style-type: decimal;
+        }
+
+        ol li ol {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ol li ol li {
+            list-style-type: lower-alpha;
+        }
+
+        ol li ul {
+            padding-top: 7px;
+        }
+
+        ol li ul li {
+            list-style: square;
+        }
+
+        .content {
+            font-size: 1.2em;
+            line-height: 140%;
+            padding: 20px;
+        }
+
+        pre,
+        code {
+            font-size: 12px;
+        }
+
+        tt {
+            font-size: 1.2em;
+        }
+
+        pre {
+            margin: 0px 0px 20px;
+        }
+
+        pre.codeinput {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            background: #f7f7f7;
+        }
+
+        pre.codeoutput {
+            padding: 10px 11px;
+            margin: 0px 0px 20px;
+            color: #4c4c4c;
+        }
+
+        pre.error {
+            color: red;
+        }
+
+        @media print {
+            pre.codeinput,
+            pre.codeoutput {
+                word-wrap: break-word;
+                width: 100%;
+            }
+        }
+
+        span.keyword {
+            color: #0000FF
+        }
+
+        span.comment {
+            color: #228B22
+        }
+
+        span.string {
+            color: #A020F0
+        }
+
+        span.untermstring {
+            color: #B20000
+        }
+
+        span.syscmd {
+            color: #B28C00
+        }
+
+        .footer {
+            width: auto;
+            padding: 10px 0px;
+            margin: 25px 0px 0px;
+            border-top: 1px dotted #878787;
+            font-size: 0.8em;
+            line-height: 140%;
+            font-style: italic;
+            color: #878787;
+            text-align: left;
+            float: none;
+        }
+
+        .footer p {
+            margin: 0px;
+        }
+
+        .footer a {
+            color: #878787;
+        }
+
+        .footer a:hover {
+            color: #878787;
+            text-decoration: underline;
+        }
+
+        .footer a:visited {
+            color: #878787;
+        }
+
+        table th {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: middle;
+            border: 1px solid #d6d4d4;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #d6d4d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Problem Set A <br> Joseph Michael Martinsen</h1>
+        <p>Math 308-510 <br>
+        <a href="http://www.math.tamu.edu/~michael.pilant/math308/index.html">
+            Michael Pilant
+        </a>
+        </p>
+        <!--introduction-->
+        <!--/introduction-->
+        <h2>Contents</h2>
+        <div>
+            <ul>
+                <li><a href="#1">Problem 1</a></li>
+                <li><a href="#2">Problem 2</a></li>
+                <li><a href="#3">Problem 3</a></li>
+                <li><a href="#4">Problem 9</a></li>
+                <li><a href="#5">Problem 11</a></li>
+            </ul>
+        </div>
+        <h2 id="1">Problem 1</h2>
+        <pre class="codeinput">
+<span class="comment">% a)</span>
+A1 = 413/(768+295);
+fprintf(<span class="string">'a)\n\t %.2f\n\n'</span>,A1)
+
+<span class="comment">% b)</span>
+fprintf(<span class="string">'b)\n\t%.2e\n'</span>,2^(123))
+fprintf(<span class="string">'\t%.0f\n\n'</span>,2^(123))
+
+<span class="comment">% c)</span>
+fprintf(<span class="string">'c)\n\t%1.34f\n'</span>,pi^2)
+fprintf(<span class="string">'\t%1.34f\n\n'</span>,exp(1))
+
+<span class="comment">% d)</span>
+val = [61/88 13863/20000 253/365];
+ln2 = log(2);
+small = val(1);
+temp = ln2 + val(1);
+fprintf(<span class="string">'d)\n'</span>)
+<span class="keyword">for</span> i = 1:3
+    fprintf(<span class="string">'\t%f\n'</span>,val(i))
+    <span class="keyword">if</span> abs(val(i) - ln2) &lt; temp
+        small = val(i);
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+fprintf(<span class="string">'\tBest approx = %f\n\n'</span>,small)
+</pre><pre class="codeoutput">a)
+	 0.39
+
+b)
+	1.06e+37
+	10633823966279326983230456482242756608
+
+c)
+	9.8696044010893579923049401259049773
+	2.7182818284590455348848081484902650
+
+d)
+	0.693182
+	0.693150
+	0.693151
+	Best approx = 0.693151
+
+</pre>
+        <h2 id="2">Problem 2</h2><pre class="codeinput">a = 1;
+prob = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];
+<span class="keyword">for</span> i = 1:3
+    val = sin(a/(10^i))/(a/10^i);
+    fprintf(<span class="string">'%s)\n\t %.15f\n'</span>,prob(i),val)
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">a)
+	 0.998334166468282
+b)
+	 0.999983333416666
+c)
+	 0.999999833333342
+</pre>
+        <h2 id="3">Problem 3</h2>
+<pre class="codeinput">
+<span class="comment">% a</span>
+fplot(@(x) x.^3-x,[-1.5 1.5])
+title(<span class="string">'3 A'</span>)
+figure
+
+<span class="comment">% b</span>
+fplot(@(x) tan(x),[-2*pi 2*pi])
+title(<span class="string">'3 B'</span>)
+figure
+
+<span class="comment">% c</span>
+fplot(@(x) x.^3-x,[-2.5 2.5])
+title(<span class="string">'3 C'</span>)
+</pre><img vspace="5" hspace="5" src="HW01_01.png" alt=""> <img vspace="5" hspace="5" src="HW01_02.png" alt=""> <img vspace="5" hspace="5" src="HW01_03.png" alt="">
+        <h2 id="4">Problem 9</h2><pre class="codeinput">figure
+fplot(@(x) x.^5 - 3*x.^2 + x + 1,[-2 2])
+syms <span class="string">x</span>
+solve(x^5 - 3*x^2 + x + 1 == 0,x)
+title(<span class="string">'Problem 9'</span>)
+ax = gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+</pre><pre class="codeoutput">
+ans =
+
+                                 1
+                                 1
+ root(z^3 + 2*z^2 + 3*z + 1, z, 1)
+ root(z^3 + 2*z^2 + 3*z + 1, z, 2)
+ root(z^3 + 2*z^2 + 3*z + 1, z, 3)
+
+</pre><img vspace="5" hspace="5" src="HW01_04.png" alt="">
+        <h2 id="5">Problem 11</h2><pre class="codeinput">syms <span class="string">x</span> <span class="string">y</span>
+e1 = x^2 - y^2 == 1;
+e2 = 2*x+y == 2;
+sol = solve([e1, e2], [x,y]);
+fprintf(<span class="string">'(%.2f, %.2f) and (%.2f, %.2f)\n'</span>,sol.x(1),sol.y(1),sol.x(2),sol.y(2))
+
+figure
+axis([-5 5 -5 5])
+hold <span class="string">on</span>
+fplot(@(x) sqrt(x.^2-1),<span class="string">'b'</span>)
+fplot(@(x) -sqrt(x.^2-1),<span class="string">'b'</span>)
+fplot(@(x) -2*x +2,<span class="string">'r'</span>)
+title(<span class="string">'Problem 11'</span>)
+ax = gca;
+ax.XAxisLocation = <span class="string">'origin'</span>;
+ax.YAxisLocation = <span class="string">'origin'</span>;
+</pre><pre class="codeoutput">(1.00, 0.00) and (1.67, -1.33)
+</pre><img vspace="5" hspace="5" src="HW01_05.png" alt="">
+        <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p>
+    </div>
+    <!--
+##### SOURCE BEGIN #####
+%% Problem Set A - 1, 2, 3, 9, 11
+
+%% Problem 1
+A1 = 413/(768+295);
+fprintf('a)\n\t %.2f\n\n',A1)
+
+% b)
+fprintf('b)\n\t%.2e\n',2^(123))
+fprintf('\t%.0f\n\n',2^(123))
+
+% c)
+fprintf('c)\n\t%1.34f\n',pi^2)
+fprintf('\t%1.34f\n\n',exp(1))
+
+% d)
+val = [61/88 13863/20000 253/365];
+ln2 = log(2);
+small = val(1);
+temp = ln2 + val(1);
+fprintf('d)\n')
+for i = 1:3
+    fprintf('\t%f\n',val(i))
+    if abs(val(i) - ln2) < temp
+        small = val(i);
+    end
+end
+fprintf('\tBest approx = %f\n\n',small)
+
+
+%% Problem 2
+a = 1;
+prob = ['a', 'b', 'c'];
+for i = 1:3
+    val = sin(a/(10^i))/(a/10^i);
+    fprintf('%s)\n\t %.15f\n',prob(i),val)
+end
+
+
+%% Problem 3
+% a
+fplot(@(x) x.^3-x,[-1.5 1.5])
+title('3 A')
+figure
+
+% b
+fplot(@(x) tan(x),[-2*pi 2*pi])
+title('3 B')
+figure
+
+% c
+fplot(@(x) x.^3-x,[-2.5 2.5])
+title('3 C')
+
+%% Problem 9
+figure
+fplot(@(x) x.^5 - 3*x.^2 + x + 1,[-2 2])
+syms x
+solve(x^5 - 3*x^2 + x + 1 == 0,x)
+title('Problem 9')
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+
+%% Problem 11
+syms x y
+e1 = x^2 - y^2 == 1;
+e2 = 2*x+y == 2;
+sol = solve([e1, e2], [x,y]);
+fprintf('(%.2f, %.2f) and (%.2f, %.2f)\n',sol.x(1),sol.y(1),sol.x(2),sol.y(2))
+
+figure
+axis([-5 5 -5 5])
+hold on
+fplot(@(x) sqrt(x.^2-1),'b')
+fplot(@(x) -sqrt(x.^2-1),'b')
+fplot(@(x) -2*x +2,'r')
+title('Problem 11')
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
+
+
+
+
+
+##### SOURCE END #####
+-->
+</body>
+
+</html>
