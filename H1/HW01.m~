@@ -58,7 +58,7 @@ title('3 C')
 figure
 fplot(@(x) x.^5 - 3*x.^2 + x + 1,[-2 2])
 syms x
-solve((@x) x.^5 - 3*x.^2 + x + 1,x)
+solve(x^5 - 3*x^2 + x + 1 == 0,x)
 title('Problem 9')
 ax = gca;
 ax.XAxisLocation = 'origin';
@@ -66,7 +66,18 @@ ax.YAxisLocation = 'origin';
 
 % 11
 syms x y
-sol = solve([x^2 - y^2 == 1, 2*x+y == 2], [x,y]);
-fprintf('(%f, %f) and (%f, %f)',sol.x(1),sol.y(1),sol.x(2),sol.y(2))
+e1 = x^2 - y^2 == 1;
+e2 = 2*x+y == 2;
+sol = solve([e1, e2], [x,y]);
+fprintf('(%.2f, %.2f) and (%.2f, %.2f)\n',sol.x(1),sol.y(1),sol.x(2),sol.y(2))
+
+figure
+axis([-10 10 -10 10])
+hold on
+fplot(@(x) sqrt(x.^2-1),'b')
+fplot(@(x) -sqrt(x.^2-1),'b')
+fplot(@(x) -2*x +2,'r')
+
+
 
 

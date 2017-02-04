@@ -72,7 +72,15 @@ sol = solve([e1, e2], [x,y]);
 fprintf('(%.2f, %.2f) and (%.2f, %.2f)\n',sol.x(1),sol.y(1),sol.x(2),sol.y(2))
 
 figure
-fplot(@(x) -2*x +2)
+axis([-5 5 -5 5])
+hold on
+fplot(@(x) sqrt(x.^2-1),'b')
+fplot(@(x) -sqrt(x.^2-1),'b')
+fplot(@(x) -2*x +2,'r')
+title('Problem 11')
+ax = gca;
+ax.XAxisLocation = 'origin';
+ax.YAxisLocation = 'origin';
 
 
 
