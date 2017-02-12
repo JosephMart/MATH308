@@ -45,23 +45,7 @@ p = ezplot(ySol2);
 
 set(p,'Color','g')
 title('y'' = xy with y(0) = 2')
-axis([0 2 1.8 3])
-legend('h = 0.1','h = 0.01', 'x*y')
-
-
-% Plot for y(0) = -1
-figure
-[x3, y3] = euler('rhs',0,-1,0.1,100);
-[x4, y4] = euler('rhs',0,-1,0.01,200);
-
-plot(x3,y3,'r')
-hold on
-plot(x4,y4,'b')
-p = ezplot(ySol3);
-
-set(p,'Color','g')
-title('y'' = xy with y(0) = -1')
-axis([0 2 -2 -.8])
+axis([2 3 0.8 2])
 legend('h = 0.1','h = 0.01', 'x*y')
 
 %% Problem 2
