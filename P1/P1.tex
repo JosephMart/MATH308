@@ -178,34 +178,80 @@ STATEMENT OF PROBLEM: Consider the following differential equations:
     \end{figure}
     \item \textbf{Numerical solution.} \\
 
-      The exact solution for $y(0)=-1$ found using Matlab is given by
+      The exact solution for $y(0)=1$ found using Matlab is given by
       \begin{align*}
         y=- \dfrac{1}{x-1}
       \end{align*}
 
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$, is compared to the exact solution below
       
-            %INSERT GRAPH
+      \begin{figure}[H]
+        \begin{center}
+          \includegraphics[scale=.9]{211.png}
+          \caption{With $y(0) = 1$}
+        \end{center}
+      \end{figure}
             
-      The exact solution for $y(0)=-1$ found using Matlab is given by
+      The exact solution for $y(0)=2$ found using Matlab is given by
       \begin{align*}
         y=-\dfrac{1}{x - \frac{1}{2}}
       \end{align*}
 
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$, is compared to the exact solution below
       
-            %INSERT GRAPH
+            \begin{figure}[H]
+              \begin{center}
+                \includegraphics[scale=.9]{212.png}
+                \caption{With $y(0) = 2$}
+              \end{center}
+            \end{figure}
             
-      The exact solution for $y(0)=-1$ found using Matlab is given by
+      The exact solution for $y(0)=-1.5$ found using Matlab is given by
       \begin{align*}
-        y=-\dfrac{1}{x+1}
+        y=-\dfrac{1}{x+ \frac{2}{3}}
       \end{align*}
 
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$, is compared to the exact solution below
       
-            %INSERT GRAPH
+            \begin{figure}[H]
+              \begin{center}
+                \includegraphics[scale=.9]{213.png}
+                \caption{With $y(0) = -1.5$}
+              \end{center}
+            \end{figure}
             
-    \item
+    \item  \textbf{Error.} Error, as a function of h. We fix the initial condition, and the interval [0,1], and then compute the error (defined as the maximum of the absolute value of the pointwise error over the interval) versus the step size h. The initial condition being analyzed is for $y(0) = -1.5$
+    
+    \begin{table}[H]
+      \caption{Error Analysis of $y = -\dfrac{1}{x+\frac{2}{3}}$}
+    
+      \begin{center}
+        \begin{tabular}{|c|c|}
+           \hline
+           Step & Max Abs Difference \\
+           \hline
+           \hline
+           .1   & 0.04656 \\
+           \hline
+           .05  & 0.02187 \\
+           \hline
+           .01  & 0.00418 \\
+           \hline
+           .005 & 0.00208 \\
+           \hline
+           .001 & 0.00041 \\
+           \hline
+        \end{tabular}
+      \end{center}
+    \end{table}
+    
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[scale=.9]{214.png}
+        \caption{Error analysis with $y(0) = -1.5$}
+      \end{center}
+    \end{figure}
+
   \end{enumerate}
   
   \item Using Matlab, we investigate the following differential equation
@@ -233,6 +279,13 @@ STATEMENT OF PROBLEM: Consider the following differential equations:
     \item
     \item
   \end{enumerate}
+  \textbf{Conclusions}
+  
+  \textbf{Appendix I:} Program Listings
+  \lstinputlisting[language=matlab,caption=euler.m]{euler.m}
+  \lstinputlisting[language=matlab,caption=rhs.m]{rhs.m}
+  \lstinputlisting[language=matlab,caption=rhs2.m]{rhs2.m}
+  \lstinputlisting[language=matlab,caption=main.m]{main.m}
 \end{enumerate}
 
 

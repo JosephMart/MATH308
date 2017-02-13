@@ -4,4 +4,4 @@ function yprime = rhs(x, y)
 % of a first order differential equation
 % dy/dx = y' = f(x,y)
 
-yprime = x.*y;
+yprime = y.^2;

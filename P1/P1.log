@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,39 +609,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-[7 <./img/21.png> <./img/22.png>] <img/31.png, id=41, 813.0375pt x 825.0825pt>
-File: img/31.png Graphic file (type png)
+[7 <./img/21.png> <./img/22.png>]
+<img/211.png, id=41, 421.575pt x 316.18124pt>
+File: img/211.png Graphic file (type png)
+ <use img/211.png>
+Package pdftex.def Info: img/211.png used on input line 190.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
 
-<use img/31.png>
-Package pdftex.def Info: img/31.png used on input line 219.
+<img/212.png, id=42, 414.04688pt x 314.67563pt>
+File: img/212.png Graphic file (type png)
+ <use img/212.png>
+Package pdftex.def Info: img/212.png used on input line 204.
+(pdftex.def)             Requested size: 372.63873pt x 283.20544pt.
+ [8 <./img/211.png (PNG copy)>] <img/213.png, id=46, 414.04688pt x 314.67563pt>
+File: img/213.png Graphic file (type png)
+
+<use img/213.png>
+Package pdftex.def Info: img/213.png used on input line 218.
+(pdftex.def)             Requested size: 372.63873pt x 283.20544pt.
+ [9 <./img/212.png (PNG copy)>]
+<img/214.png, id=50, 421.575pt x 316.18124pt>
+File: img/214.png Graphic file (type png)
+ <use img/214.png>
+Package pdftex.def Info: img/214.png used on input line 250.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
+ [10 <./img/213.png (PNG copy)>] <img/31.png, id=54, 813.0375pt x 825.0825pt>
+File: img/31.png Graphic file (type png)
+ <use img/31.png>
+Package pdftex.def Info: img/31.png used on input line 265.
 (pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
- [8] <img/32.png, id=45, 813.0375pt x 825.0825pt>
+
+[11 <./img/214.png (PNG copy)>] <img/32.png, id=58, 813.0375pt x 825.0825pt>
 File: img/32.png Graphic file (type png)
 
 <use img/32.png>
-Package pdftex.def Info: img/32.png used on input line 228.
+Package pdftex.def Info: img/32.png used on input line 274.
 (pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
- [9 <./img/31.png> <./img/32.png>] [10] (./P1.aux) ) 
+ [12 <./img/31.png> <./img/32.png>]
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (./euler.m
+Overfull \hbox (3.83247pt too wide) in paragraph at lines 15--17
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[13]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+) (./rhs.m) (./rhs2.m)
+(./main.m [14] [15] [16] [17] [18] [19] [20]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 199.
+) [21] (./P1.aux) ) 
 Here is how much of TeX's memory you used:
- 12557 strings out of 493014
- 221008 string characters out of 6122320
- 373040 words of memory out of 5000000
- 15965 multiletter control sequences out of 15000+600000
- 8698 words of font info for 34 fonts, out of 8000000 for 9000
+ 13266 strings out of 493014
+ 229119 string characters out of 6122320
+ 433192 words of memory out of 5000000
+ 16649 multiletter control sequences out of 15000+600000
+ 9045 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,42p,10412b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb>
-Output written on P1.pdf (10 pages, 249389 bytes).
+ 40i,10n,43p,10412b,2119s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on P1.pdf (21 pages, 341881 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
