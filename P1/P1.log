@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.17)  12 FEB 2017 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,55 +569,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<img/21.png, id=17, 813.0375pt x 825.0825pt>
+<img/111.png, id=17, 421.575pt x 316.18124pt>
+File: img/111.png Graphic file (type png)
+ <use img/111.png>
+Package pdftex.def Info: img/111.png used on input line 90.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
+
+<img/112.png, id=18, 421.575pt x 316.18124pt>
+File: img/112.png Graphic file (type png)
+ <use img/112.png>
+Package pdftex.def Info: img/112.png used on input line 104.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
+ [3 <./img/111.png (PNG copy)>] <img/113.png, id=24, 421.575pt x 316.18124pt>
+File: img/113.png Graphic file (type png)
+
+<use img/113.png>
+Package pdftex.def Info: img/113.png used on input line 118.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
+ [4 <./img/112.png (PNG copy)>]
+<img/114.png, id=28, 421.575pt x 316.18124pt>
+File: img/114.png Graphic file (type png)
+ <use img/114.png>
+Package pdftex.def Info: img/114.png used on input line 151.
+(pdftex.def)             Requested size: 379.41399pt x 284.56049pt.
+ [5 <./img/113.png (PNG copy)>] <img/21.png, id=32, 813.0375pt x 825.0825pt>
 File: img/21.png Graphic file (type png)
  <use img/21.png>
-Package pdftex.def Info: img/21.png used on input line 119.
-(pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
- [3]
-<img/22.png, id=23, 813.0375pt x 825.0825pt>
-File: img/22.png Graphic file (type png)
- <use img/22.png>
-Package pdftex.def Info: img/22.png used on input line 128.
+Package pdftex.def Info: img/21.png used on input line 165.
 (pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+[6 <./img/114.png (PNG copy)>] <img/22.png, id=36, 813.0375pt x 825.0825pt>
+File: img/22.png Graphic file (type png)
+
+<use img/22.png>
+Package pdftex.def Info: img/22.png used on input line 174.
+(pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
-[4 <./img/21.png> <./img/22.png>] <img/31.png, id=27, 813.0375pt x 825.0825pt>
+[7 <./img/21.png> <./img/22.png>] <img/31.png, id=41, 813.0375pt x 825.0825pt>
 File: img/31.png Graphic file (type png)
 
 <use img/31.png>
-Package pdftex.def Info: img/31.png used on input line 173.
+Package pdftex.def Info: img/31.png used on input line 219.
 (pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
- [5] <img/32.png, id=31, 813.0375pt x 825.0825pt>
+ [8] <img/32.png, id=45, 813.0375pt x 825.0825pt>
 File: img/32.png Graphic file (type png)
 
 <use img/32.png>
-Package pdftex.def Info: img/32.png used on input line 182.
+Package pdftex.def Info: img/32.png used on input line 228.
 (pdftex.def)             Requested size: 243.91313pt x 247.52666pt.
- [6 <./img/31.png> <./img/32.png>] [7] (./P1.aux) ) 
+ [9 <./img/31.png> <./img/32.png>] [10] (./P1.aux) ) 
 Here is how much of TeX's memory you used:
- 12532 strings out of 493014
- 220687 string characters out of 6122320
- 373023 words of memory out of 5000000
- 15944 multiletter control sequences out of 15000+600000
+ 12557 strings out of 493014
+ 221008 string characters out of 6122320
+ 373040 words of memory out of 5000000
+ 15965 multiletter control sequences out of 15000+600000
  8698 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,10n,42p,10412b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb>
-Output written on P1.pdf (7 pages, 206786 bytes).
+ 40i,10n,42p,10412b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb>
+Output written on P1.pdf (10 pages, 249389 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -85,7 +85,12 @@ STATEMENT OF PROBLEM: Consider the following differential equations:
       
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$ is compared to the solution before. \\
       
-      %INSERT GRAPH
+      \begin{figure}[H]
+        \begin{center}
+          \includegraphics[scale=.9]{111.png}
+          \caption{With $y(0)=1$}
+        \end{center}
+      \end{figure}
       
       The exact solution for $y(0)=2$ found using Matlab is given by
       \begin{align*}
@@ -94,7 +99,12 @@ STATEMENT OF PROBLEM: Consider the following differential equations:
       
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$, is compared to the exact solution below
       
-      %INSERT GRAPH
+      \begin{figure}[H]
+        \begin{center}
+          \includegraphics[scale=.9]{112.png}
+          \caption{With $y(0) = 2$}
+        \end{center}
+      \end{figure}
       
       The exact solution for $y(0)=-1$ found using Matlab is given by
       \begin{align*}
@@ -103,9 +113,45 @@ STATEMENT OF PROBLEM: Consider the following differential equations:
 
       The graph of the results of Euler's method, with $h=0.1$ and $h=0.01$, is compared to the exact solution below
       
-            %INSERT GRAPH
+            \begin{figure}[H]
+              \begin{center}
+                \includegraphics[scale=.9]{113.png}
+                \caption{With $y(0) = -1$}
+                \label{fig:}
+              \end{center}
+            \end{figure}
     
-    \item
+    \item  \textbf{Error.} Error, as a function of h. We fix the initial condition, and the interval [0,1], and then compute the error (defined as the maximum of the absolute value of the pointwise error over the interval) versus the step size h. The initial condition being analyzed is for $y(0) = 2$
+    
+    \begin{table}[H]
+      \caption{Error Analysis of $y = 2e^{x^2/2}$}
+      \label{tab:}
+    
+      \begin{center}
+        \begin{tabular}{|c|c|}
+           \hline
+           Step & Max Abs Difference \\
+           \hline
+           \hline
+           .1   & 0.20322 \\
+           \hline
+           .05  & 0.10556 \\
+           \hline
+           .01  & 0.00218 \\
+           \hline
+           .005 & 0.10946 \\
+           \hline
+           .001 & 0.00220 \\
+           \hline
+        \end{tabular}
+      \end{center}
+    \end{table}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[scale=.9]{114.png}
+        \caption{Error Analysis of $y = 2e^{x^2/2}$}
+      \end{center}
+    \end{figure}
   \end{enumerate}
 
   \item Using Matlab, we investigate the following differential equation

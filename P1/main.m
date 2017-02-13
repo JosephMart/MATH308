@@ -64,6 +64,40 @@ title('y'' = xy with y(0) = -1')
 axis([0 2 -2 -.8])
 legend('h = 0.1','h = 0.01', 'x*y')
 
+%% Error Analysis fixing y(0) = 2
+[x5, y5] = euler('rhs',0,2,0.1,10);
+[x6, y6] = euler('rhs',0,2,0.05,20);
+[x7, y7] = euler('rhs',0,2,0.01,100);
+[x8, y8] = euler('rhs',0,2,0.005,200);
+[x9, y9] = euler('rhs',0,2,0.001,1000);
+
+eq5 = 2 .* exp(x5.^2/2);
+eq6 = 2 .* exp(x6.^2/2);
+eq7 = 2 .* exp(x7.^2/2);
+eq8 = 2 .* exp(x8.^2/2);
+eq9 = 2 .* exp(x9.^2/2);
+
+maxdiff(1) = max(abs(y5-eq5));
+maxdiff(2) = max(abs(y6-eq6));
+maxdiff(3) = max(abs(y7-eq7));
+maxdiff(4) = max(abs(y8-eq8));
+maxdiff(5) = max(abs(y9-eq9));
+
+fprintf('\nStep \t Difference\n')
+fprintf('.1 \t %d\n', maxdiff(1))
+fprintf('.05 \t %d\n',maxdiff(2))
+fprintf('.01 \t %d\n',maxdiff(3))
+fprintf('.005 \t %d\n',maxdiff(4))
+fprintf('.001 \t %d\n',maxdiff(5))
+
+step = [.1 .05 .01 .005 .001];
+
+plot(step,maxdiff)
+title('Error Analysis of y = 2e^{x^2/2}')
+xlabel('h steps')
+ylabel('Max Difference')
+
+
 %% Problem 2
 syms y(x)
 eqn = diff(y,x) == y^2;
