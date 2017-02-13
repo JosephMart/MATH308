@@ -196,10 +196,15 @@ ylabel('Max Difference')
 
 %% Problem 3
 % syms y(x)
-% eqn = x*diff(y,x) + sin(x)*y == x^2;
-% cond = y(0) == 1;
-% cond1 = y(0) == 2;
-% cond2 = y(0) == -1;
 % ySol(x) = dsolve(eqn,cond)
 % ySol(x) = dsolve(eqn,cond1)
 % ySol(x) = dsolve(eqn,cond2)
+% [x, y]=ode45('rhs3', [0, 10], 1);
+[x5, y5] = euler('rhs',0,1,0.1,10);
+
+% plot(x,y)
+plot(x5,y5)
+axis([0 1 0 1])
+% [x11,y11] = ode45(eqn,tspan,y0);
+% [x12,y12] = ode45(eqn,tspan,y0);
+
