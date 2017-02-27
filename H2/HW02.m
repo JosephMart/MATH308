@@ -1,11 +1,35 @@
 %% Due 3/2/17 (page 75 ff) Problem Set B - 2, 4, 9, 12 (use dfield8), 15
 
 %% Problem 2
+fprintf('Problem 2\n')
+
 clear;
 syms y(t)
 eqn = t*diff(y,t) + 2*y == exp(t);
 
+% Part A
+ySol(t) = dsolve(eqn,y(1) == 1);
+yp = (exp(t)*(t-1)+1)/t^2;
+yprime = diff((exp(t)*(t-1)+1)/t^2,t);
+a = t*yprime +2*y;
+an = simplify(a);
+fprintf('Part A\n\n')
+fprintf('y = %s\ny'' = %s\n',char(yp),char(yprime))
+fprintf('Subs into the %s results in %s\n',char(ySol(t)),char(a))
+fprintf('Using MATLAB''s simplify command results in %s which is exactly what is should be\n\n',char(an))
 
+% Part B
+fprintf('Part B\n\n')
+figure
+ezplot(yp)
+axis([-1 3 0 6])
+title('Problem 2 - Part B')
+ylabel('y(t)')
+fprintf('The solution graph for t=0, y(t) approaches 0. The solution graph for large t''s, y(t) approaches Inf\n\n')
+
+
+% Part C
+clear ySol(t)
 figure
 hold on
 for i= -3:3
@@ -14,8 +38,13 @@ for i= -3:3
     ezplot(ySol(t))
 end
 axis([-3 3 -10 10])
-title('Problem 2')
+title('Problem 2 - Part C')
 ylabel('y(t)')
+
+% Part D
+fprintf('Part D\n\n')
+fprintf('As the graphs approach t=0, the graphs diverge. For larg t''s, the graphs begin to approach Inf\n')
+fprintf('Yes there is a singularity, for the condition y(t) = 1, the graph does not diverge at t=0\n')
 
 %% Problem 4
 clear;
