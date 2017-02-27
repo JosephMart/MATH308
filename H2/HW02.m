@@ -68,22 +68,42 @@ fprintf('The 3 different behaviors are, slope is always negative (c = -.5,-.45,-
 fprintf('and the third is the slope is always positive (c = -.1, -.05, 0)\n\n')
 %% Problem 9
 clear;
-syms a(t) b(t) c(t) d(t) e(t) r k y(t)
-a = diff(y,t) == r*y - k *y^2;
+fprintf('Problem 9\n\n')
+syms r k y(t) a(t)
+
+% Part A
+fprintf('Part A\n')
+a = diff(y,t) == r*y - k * y^2;
+aANS(t) = dsolve(a);
+fprintf('The solutions for %s are:\n', char(a))
+display(aANS(t))
+
+% Part B
+fprintf('\nPart B\n')
 b = diff(y,t) == t*(t^2+1)/(4*y^3);
+bANS = dsolve(b, y(0) == -1/sqrt(2));
+fprintf('The solution to %s with y(0) = -1/sqrt(2) is\n %s\n\n',char(b), char(bANS))
+
+% Part C
 c = (exp(t)*sin(y)+3*y)/(3*t-exp(t)*sin(y)) == diff(y,t);
+% dsolve(c)
+
+% Part D
 d = diff(y,t) == (2*y-y)/(2*t-y);
+dsolve(d)
+
+% Part E
+fprintf('Part E\n')
 e = diff(y,t) == (2*t+y)/(3+3*y^2-t);
+eANS = dsolve(e,y(0)==0);
+fprintf('The solution for %s is:\n %s\n\n',char(e),char(eANS))
 
-eq = [
-a
-b 
-c
-d
-e
-];
-dsolve(eq(2))
 %% Problem 12
+clear;
+syms y(t)
+fzero(3*sin(y) + y - 2,2)
 
 
+% Part B - It is obvious that a solution is y = t because lines approach
+% that line
 %% Problem 15
