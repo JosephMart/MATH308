@@ -48,6 +48,7 @@ fprintf('Yes there is a singularity, for the condition y(t) = 1, the graph does 
 
 %% Problem 4
 clear;
+fprintf('Problem 4\n\n')
 syms y(t)
 eqn = diff(y,t) - 2*y == sin(2*t);
 figure
@@ -61,6 +62,10 @@ end
 axis([0 4 -5 5])
 title('Problem 4')
 ylabel('y')
+
+fprintf('As t increases, the slope increaces. ')
+fprintf('The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.35), the slope begins positive then becomes negative. (c = -.3,-.25,-.2,-.15) ')
+fprintf('and the third is the slope is always positive (c = -.1, -.05, 0)\n\n')
 %% Problem 9
 clear;
 syms a(t) b(t) c(t) d(t) e(t) r k y(t)
