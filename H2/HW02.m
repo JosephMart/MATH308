@@ -100,10 +100,63 @@ fprintf('The solution for %s is:\n %s\n\n',char(e),char(eANS))
 
 %% Problem 12
 clear;
+% clear;
 syms y(t)
-fzero(3*sin(y) + y - 2,2)
-
+% eqn = 3*sin(y) + y - 2 - diff(y,t);
+% 
+% fzero(eqn,4.5)
+fun = @cos; % function
+x0 = [1 2]; % initial interval
+x = fzero(fun,x0)
 
 % Part B - It is obvious that a solution is y = t because lines approach
 % that line
 %% Problem 15
+clear;
+fprintf('Problem 15\n\n')
+syms y(t) c
+
+% Part A
+fprintf('Part A\n\n')
+eqn = diff(y,t) == t * y^3;
+ansA = dsolve(eqn,y(0)==c);
+fprintf(['Using dsolve to solve %s with initial condition y(0) = c ', ...
+         'the solutions are\ny(t) = %s\ny(t) = %s\nI think Matlab g', ...
+         'ives two solutions because it gives the solution for posi', ...
+         'tive or negative values of c\n\n'] ...
+         , char(eqn),char(ansA(1)),char(ansA(2)))
+
+% Part B
+fprintf('Part B\n\n')
+fprintf('Substituting for c = 0\n')
+% Can't sub because of division by 0
+try
+    subs(ansA(1),c,0)
+    subs(ansA(2),c,0)
+catch
+    err = lasterror;
+    msg = err.message;
+    warning(msg)
+end
+
+l1 = limit(ansA(1),c,0);
+l2 = limit(ansA(2),c,0);
+fprintf('Taking the limit as c approaches c results in %s and %s\n\n' ...
+        ,l1,l2)
+
+% Part C
+fprintf('Part C\n\n')
+figure
+hold on
+for i = -5:5
+   ezplot(dsolve(eqn,y(0)==i))
+end
+
+axis([-5 5 -5 5])
+title('Problem 15 Part C')
+ylabel('y(t)')
+fprintf(['From looking at the plot, it appears that the solution is ', ...
+        'unstable because the plots diverge above\nand below t = 0\n'])
+
+
+
