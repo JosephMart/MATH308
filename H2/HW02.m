@@ -29,6 +29,7 @@ fprintf('The solution graph for t=0, y(t) approaches 0. The solution graph for l
 
 
 % Part C
+fprintf('Part C\n\n')
 clear ySol(t)
 figure
 hold on
@@ -40,6 +41,7 @@ end
 axis([-3 3 -10 10])
 title('Problem 2 - Part C')
 ylabel('y(t)')
+fprintf('See graphs for C\n\n')
 
 % Part D
 fprintf('Part D\n\n')
@@ -100,17 +102,23 @@ fprintf('The solution for %s is:\n %s\n\n',char(e),char(eANS))
 
 %% Problem 12
 clear;
-% clear;
-syms y(t)
-% eqn = 3*sin(y) + y - 2 - diff(y,t);
-% 
-% fzero(eqn,4.5)
-fun = @cos; % function
-x0 = [1 2]; % initial interval
-x = fzero(fun,x0)
+fprintf('Problem 12\n\n')
+fzero(@f12,1)
+fzero(@f12,5)
 
 % Part B - It is obvious that a solution is y = t because lines approach
 % that line
+fprintf(['The solution is evident because ',...
+        'because vector fields point at t axis'])
+% Part C
+fprintf('Part C\n\n')
+syms y(t) c
+eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==c);
+fprintf('Solving y(0) = c\ny(t) = %s\n',char(eq))
+for i = -5:5
+    eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==i);
+    fprintf('Solving y(0) = %d\ny(t) = %s\n',i,char(eq))
+end
 %% Problem 15
 clear;
 fprintf('Problem 15\n\n')

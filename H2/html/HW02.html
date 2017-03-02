@@ -1,0 +1,851 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+    <title>Due 3/2/17 (page 75 ff) Problem Set B - 2, 4, 9, 12 (use dfield8), 15</title>
+    <meta name="generator" content="MATLAB 9.1">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2017-03-02">
+    <meta name="DC.source" content="HW02.m">
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        :focus {
+            outine: 0
+        }
+
+        ins {
+            text-decoration: none
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html {
+            min-height: 100%;
+            margin-bottom: 1px;
+        }
+
+        html body {
+            height: 100%;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #000;
+            line-height: 140%;
+            background: #fff none;
+            overflow-y: scroll;
+        }
+
+        html body td {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        h1 {
+            padding: 0px;
+            margin: 0px 0px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: #d55000;
+            line-height: 100%;
+            font-weight: normal;
+        }
+
+        h2 {
+            padding: 0px;
+            margin: 0px 0px 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+            border-bottom: 1px solid #d6d4d4;
+            display: block;
+        }
+
+        h3 {
+            padding: 0px;
+            margin: 0px 0px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+        }
+
+        a {
+            color: #005fce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005fce;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #004aa0;
+            text-decoration: none;
+        }
+
+        p {
+            padding: 0px;
+            margin: 0px 0px 20px;
+        }
+
+        img {
+            padding: 0px;
+            margin: 0px 0px 20px;
+            border: none;
+        }
+
+        p img,
+        pre img,
+        tt img,
+        li img,
+        h1 img,
+        h2 img {
+            margin-bottom: 0px;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px 0px 20px 23px;
+            list-style: square;
+        }
+
+        ul li {
+            padding: 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ul li ul {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 23px;
+        }
+
+        ul li ol li {
+            list-style: decimal;
+        }
+
+        ol {
+            padding: 0px;
+            margin: 0px 0px 20px 0px;
+            list-style: decimal;
+        }
+
+        ol li {
+            padding: 0px;
+            margin: 0px 0px 7px 23px;
+            list-style-type: decimal;
+        }
+
+        ol li ol {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ol li ol li {
+            list-style-type: lower-alpha;
+        }
+
+        ol li ul {
+            padding-top: 7px;
+        }
+
+        ol li ul li {
+            list-style: square;
+        }
+
+        .content {
+            font-size: 1.2em;
+            line-height: 140%;
+            padding: 20px;
+        }
+
+        pre,
+        code {
+            font-size: 12px;
+        }
+
+        tt {
+            font-size: 1.2em;
+        }
+
+        pre {
+            margin: 0px 0px 20px;
+        }
+
+        pre.codeinput {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            background: #f7f7f7;
+        }
+
+        pre.codeoutput {
+            padding: 10px 11px;
+            margin: 0px 0px 20px;
+            color: #4c4c4c;
+        }
+
+        pre.error {
+            color: red;
+        }
+
+        @media print {
+            pre.codeinput,
+            pre.codeoutput {
+                word-wrap: break-word;
+                width: 100%;
+            }
+        }
+
+        span.keyword {
+            color: #0000FF
+        }
+
+        span.comment {
+            color: #228B22
+        }
+
+        span.string {
+            color: #A020F0
+        }
+
+        span.untermstring {
+            color: #B20000
+        }
+
+        span.syscmd {
+            color: #B28C00
+        }
+
+        .footer {
+            width: auto;
+            padding: 10px 0px;
+            margin: 25px 0px 0px;
+            border-top: 1px dotted #878787;
+            font-size: 0.8em;
+            line-height: 140%;
+            font-style: italic;
+            color: #878787;
+            text-align: left;
+            float: none;
+        }
+
+        .footer p {
+            margin: 0px;
+        }
+
+        .footer a {
+            color: #878787;
+        }
+
+        .footer a:hover {
+            color: #878787;
+            text-decoration: underline;
+        }
+
+        .footer a:visited {
+            color: #878787;
+        }
+
+        table th {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: middle;
+            border: 1px solid #d6d4d4;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #d6d4d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+      <h1>Problem Set B <br> Joseph Michael Martinsen</h1>
+      <p>Math 308-510 <br>
+      <a href="http://www.math.tamu.edu/~michael.pilant/math308/index.html">
+          Michael Pilant
+      </a>
+      </p>
+        <!--introduction-->
+        <!--/introduction-->
+        <h2>Contents</h2>
+        <div>
+            <ul>
+                <li><a href="#1">Problem 2</a></li>
+                <li><a href="#2">Problem 4</a></li>
+                <li><a href="#3">Problem 9</a></li>
+                <li><a href="#4">Problem 12</a></li>
+                <li><a href="#5">Problem 15</a></li>
+            </ul>
+        </div>
+        <h2 id="1">Problem 2</h2><pre class="codeinput">fprintf(<span class="string">'Problem 2\n'</span>)
+
+clear;
+syms <span class="string">y(t)</span>
+eqn = t*diff(y,t) + 2*y == exp(t);
+
+<span class="comment">% Part A</span>
+ySol(t) = dsolve(eqn,y(1) == 1);
+yp = (exp(t)*(t-1)+1)/t^2;
+yprime = diff((exp(t)*(t-1)+1)/t^2,t);
+a = t*yprime +2*y;
+an = simplify(a);
+fprintf(<span class="string">'Part A\n\n'</span>)
+fprintf(<span class="string">'y = %s\ny'' = %s\n'</span>,char(yp),char(yprime))
+fprintf(<span class="string">'Subs into the %s results in %s\n'</span>,char(ySol(t)),char(a))
+fprintf(<span class="string">'Using MATLAB''s simplify command results in %s which is exactly what is should be\n\n'</span>,char(an))
+
+<span class="comment">% Part B</span>
+fprintf(<span class="string">'Part B\n\n'</span>)
+figure
+ezplot(yp)
+axis([-1 3 0 6])
+title(<span class="string">'Problem 2 - Part B'</span>)
+ylabel(<span class="string">'y(t)'</span>)
+fprintf(<span class="string">'The solution graph for t=0, y(t) approaches 0. The solution graph for large t''s, y(t) approaches Inf\n\n'</span>)
+
+
+<span class="comment">% Part C</span>
+fprintf(<span class="string">'Part C\n\n'</span>)
+clear <span class="string">ySol(t)</span>
+figure
+hold <span class="string">on</span>
+<span class="keyword">for</span> i= -3:3
+    cond = y(1) == i;
+    ySol(t) = dsolve(eqn,cond);
+    ezplot(ySol(t))
+<span class="keyword">end</span>
+axis([-3 3 -10 10])
+title(<span class="string">'Problem 2 - Part C'</span>)
+ylabel(<span class="string">'y(t)'</span>)
+fprintf(<span class="string">'See graphs for C\n\n'</span>)
+
+<span class="comment">% Part D</span>
+fprintf(<span class="string">'Part D\n\n'</span>)
+fprintf(<span class="string">'As the graphs approach t=0, the graphs diverge. For larg t''s, the graphs begin to approach Inf\n'</span>)
+fprintf(<span class="string">'Yes there is a singularity, for the condition y(t) = 1, the graph does not diverge at t=0\n'</span>)
+</pre><pre class="codeoutput">Problem 2
+Part A
+
+y = (exp(t)*(t - 1) + 1)/t^2
+y' = (exp(t) + exp(t)*(t - 1))/t^2 - (2*(exp(t)*(t - 1) + 1))/t^3
+Subs into the 1/t^2 + (exp(t)*(t - 1))/t^2 results in 2*y(t) + t*((exp(t) + exp(t)*(t - 1))/t^2 - (2*(exp(t)*(t - 1) + 1))/t^3)
+Using MATLAB's simplify command results in 2*y(t) + t*((exp(t) + exp(t)*(t - 1))/t^2 - (2*(exp(t)*(t - 1) + 1))/t^3) which is exactly
+what is should be
+
+Part B
+
+The solution graph for t=0, y(t) approaches 0. The solution graph for large t's, y(t) approaches Inf
+
+Part C
+
+See graphs for C
+
+Part D
+
+As the graphs approach t=0, the graphs diverge. For larg t's, the graphs begin to approach Inf
+Yes there is a singularity, for the condition y(t) = 1, the graph does not diverge at t=0
+</pre><img vspace="5" hspace="5" src="HW02_01.png" alt=""> <img vspace="5" hspace="5" src="HW02_02.png" alt="">
+        <h2 id="2">Problem 4</h2><pre class="codeinput">clear;
+fprintf(<span class="string">'Problem 4\n\n'</span>)
+syms <span class="string">y(t)</span>
+eqn = diff(y,t) - 2*y == sin(2*t);
+figure
+hold <span class="string">on</span>
+
+<span class="keyword">for</span> i = -0.5:.05:0
+    cond = y(1) == i;
+    ySol(t) = dsolve(eqn,cond);
+    ezplot(ySol(t))
+<span class="keyword">end</span>
+axis([0 4 -5 5])
+title(<span class="string">'Problem 4'</span>)
+ylabel(<span class="string">'y'</span>)
+
+fprintf(<span class="string">'As t increases, the slope increaces. '</span>)
+fprintf(<span class="string">'The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.35), the slope begins positive then becomes negative. (c = -.3,-.25,-.2,-.15) '</span>)
+fprintf(<span class="string">'and the third is the slope is always positive (c = -.1, -.05, 0)\n\n'</span>)
+</pre><pre class="codeoutput">Problem 4
+
+As t increases, the slope increaces. The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.35), the slope
+begins positive then becomes negative. (c = -.3,-.25,-.2,-.15) and the third is the slope is always positive (c = -.1, -.05, 0)
+
+</pre><img vspace="5" hspace="5" src="HW02_03.png" alt="">
+        <h2 id="3">Problem 9</h2><pre class="codeinput">clear;
+fprintf(<span class="string">'Problem 9\n\n'</span>)
+syms <span class="string">r</span> <span class="string">k</span> <span class="string">y(t)</span> <span class="string">a(t)</span>
+
+<span class="comment">% Part A</span>
+fprintf(<span class="string">'Part A\n'</span>)
+a = diff(y,t) == r*y - k * y^2;
+aANS(t) = dsolve(a);
+fprintf(<span class="string">'The solutions for %s are:\n'</span>, char(a))
+display(aANS(t))
+
+<span class="comment">% Part B</span>
+fprintf(<span class="string">'\nPart B\n'</span>)
+b = diff(y,t) == t*(t^2+1)/(4*y^3);
+bANS = dsolve(b, y(0) == -1/sqrt(2));
+fprintf(<span class="string">'The solution to %s with y(0) = -1/sqrt(2) is\n %s\n\n'</span>,char(b), char(bANS))
+
+<span class="comment">% Part C</span>
+c = (exp(t)*sin(y)+3*y)/(3*t-exp(t)*sin(y)) == diff(y,t);
+<span class="comment">% dsolve(c)</span>
+
+<span class="comment">% Part D</span>
+d = diff(y,t) == (2*y-y)/(2*t-y);
+dsolve(d)
+
+<span class="comment">% Part E</span>
+fprintf(<span class="string">'Part E\n'</span>)
+e = diff(y,t) == (2*t+y)/(3+3*y^2-t);
+eANS = dsolve(e,y(0)==0);
+fprintf(<span class="string">'The solution for %s is:\n %s\n\n'</span>,char(e),char(eANS))
+</pre><pre class="codeoutput">Problem 9
+
+Part A
+The solutions for diff(y(t), t) == r*y(t) - k*y(t)^2 are:
+
+ans =
+
+                                     0
+                                   r/k
+ (r*(tanh((r*(C34 + t))/2) + 1))/(2*k)
+
+
+Part B
+The solution to diff(y(t), t) == (t*(t^2 + 1))/(4*y(t)^3) with y(0) = -1/sqrt(2) is
+ -4^(1/4)*((t^2*(t^2 + 2))/16 + 1/16)^(1/4)
+
+
+ans =
+
+                                                               t
+                                                               0
+ exp(C40)/2 + (t^(1/2)*exp(C40/2)*(-(4*t - exp(C40))/t)^(1/2))/2
+ exp(C40)/2 - (t^(1/2)*exp(C40/2)*(-(4*t - exp(C40))/t)^(1/2))/2
+
+Part E
+The solution for diff(y(t), t) == (2*t + y(t))/(3*y(t)^2 - t + 3) is:
+ (t/3 - 1)/(t^2/2 + (t^4/4 - (t/3 - 1)^3)^(1/2))^(1/3) + (t^2/2 + (t^4/4 - (t/3 - 1)^3)^(1/2))^(1/3)
+
+</pre>
+        <h2 id="4">Problem 12</h2><pre class="codeinput">clear;
+fprintf(<span class="string">'Problem 12\n\n'</span>)
+fzero(@f12,1)
+fzero(@f12,5)
+
+<span class="comment">% Part B - It is obvious that a solution is y = t because lines approach</span>
+<span class="comment">% that line</span>
+fprintf([<span class="string">'The solution is evident because '</span>,<span class="keyword">...</span>
+        <span class="string">'because vector fields point at t axis'</span>])
+<span class="comment">% Part C</span>
+fprintf(<span class="string">'Part C\n\n'</span>)
+syms <span class="string">y(t)</span> <span class="string">c</span>
+eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==c);
+fprintf(<span class="string">'Solving y(0) = c\ny(t) = %s\n'</span>,char(eq))
+<span class="keyword">for</span> i = -5:5
+    eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==i);
+    fprintf(<span class="string">'Solving y(0) = %d\ny(t) = %s\n'</span>,i,char(eq))
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Problem 12
+
+
+ans =
+
+    0.5170
+
+
+ans =
+
+    4.9295
+
+The solution is evident because because vector fields point at t axisPart C
+
+Solving y(0) = c
+y(t) = exp(-t^2/2)/(1/c - (2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2)
+Solving y(0) = -5
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 + 1/5)
+Solving y(0) = -4
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 + 1/4)
+Solving y(0) = -3
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 + 1/3)
+Solving y(0) = -2
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 + 1/2)
+Solving y(0) = -1
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 + 1)
+Solving y(0) = 0
+y(t) = 0
+Solving y(0) = 1
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 - 1)
+Solving y(0) = 2
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 - 1/2)
+Solving y(0) = 3
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 - 1/3)
+Solving y(0) = 4
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 - 1/4)
+Solving y(0) = 5
+y(t) = -exp(-t^2/2)/((2^(1/2)*pi^(1/2)*erf((2^(1/2)*t)/2))/2 - 1/5)
+</pre><img vspace="3" hspace="3" src="12a.png" alt=""><br>
+<img vspace="5" hspace="5" src="12b.png" alt="">
+
+
+        <h2 id="5">Problem 15</h2><pre class="codeinput">clear;
+fprintf(<span class="string">'Problem 15\n\n'</span>)
+syms <span class="string">y(t)</span> <span class="string">c</span>
+
+<span class="comment">% Part A</span>
+fprintf(<span class="string">'Part A\n\n'</span>)
+eqn = diff(y,t) == t * y^3;
+ansA = dsolve(eqn,y(0)==c);
+fprintf([<span class="string">'Using dsolve to solve %s with initial condition y(0) = c '</span>, <span class="keyword">...</span>
+         <span class="string">'the solutions are\ny(t) = %s\ny(t) = %s\nI think Matlab g'</span>, <span class="keyword">...</span>
+         <span class="string">'ives two solutions because it gives the solution for posi'</span>, <span class="keyword">...</span>
+         <span class="string">'tive or negative values of c\n\n'</span>] <span class="keyword">...</span>
+         , char(eqn),char(ansA(1)),char(ansA(2)))
+
+<span class="comment">% Part B</span>
+fprintf(<span class="string">'Part B\n\n'</span>)
+fprintf(<span class="string">'Substituting for c = 0\n'</span>)
+<span class="comment">% Can't sub because of division by 0</span>
+<span class="keyword">try</span>
+    subs(ansA(1),c,0)
+    subs(ansA(2),c,0)
+<span class="keyword">catch</span>
+    err = lasterror;
+    msg = err.message;
+    warning(msg)
+<span class="keyword">end</span>
+
+l1 = limit(ansA(1),c,0);
+l2 = limit(ansA(2),c,0);
+fprintf(<span class="string">'Taking the limit as c approaches c results in %s and %s\n\n'</span> <span class="keyword">...</span>
+        ,l1,l2)
+
+<span class="comment">% Part C</span>
+fprintf(<span class="string">'Part C\n\n'</span>)
+figure
+hold <span class="string">on</span>
+<span class="keyword">for</span> i = -5:5
+   ezplot(dsolve(eqn,y(0)==i))
+<span class="keyword">end</span>
+
+axis([-5 5 -5 5])
+title(<span class="string">'Problem 15 Part C'</span>)
+ylabel(<span class="string">'y(t)'</span>)
+fprintf([<span class="string">'From looking at the plot, it appears that the solution is '</span>, <span class="keyword">...</span>
+        <span class="string">'unstable because the plots diverge above\nand below t = 0\n'</span>])
+</pre><pre class="codeoutput">Problem 15
+
+Part A
+
+Using dsolve to solve diff(y(t), t) == t*y(t)^3 with initial condition y(0) = c the solutions are
+y(t) = (2^(1/2)*(1/(1/(2*c^2) - t^2/2))^(1/2))/2
+y(t) = -(2^(1/2)*(1/(1/(2*c^2) - t^2/2))^(1/2))/2
+I think Matlab gives two solutions because it gives the solution for positive or negative values of c
+
+Part B
+
+Substituting for c = 0
+Warning: Error using symengine
+Division by zero.
+Taking the limit as c approaches c results in 0 and 0
+
+Part C
+
+From looking at the plot, it appears that the solution is unstable because the plots diverge above
+and below t = 0
+</pre><img vspace="5" hspace="5" src="HW02_04.png" alt="">
+        <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p>
+    </div>
+    <!--
+##### SOURCE BEGIN #####
+%% Due 3/2/17 (page 75 ff) Problem Set B - 2, 4, 9, 12 (use dfield8), 15
+
+%% Problem 2
+fprintf('Problem 2\n')
+
+clear;
+syms y(t)
+eqn = t*diff(y,t) + 2*y == exp(t);
+
+% Part A
+ySol(t) = dsolve(eqn,y(1) == 1);
+yp = (exp(t)*(t-1)+1)/t^2;
+yprime = diff((exp(t)*(t-1)+1)/t^2,t);
+a = t*yprime +2*y;
+an = simplify(a);
+fprintf('Part A\n\n')
+fprintf('y = %s\ny'' = %s\n',char(yp),char(yprime))
+fprintf('Subs into the %s results in %s\n',char(ySol(t)),char(a))
+fprintf('Using MATLAB''s simplify command results in %s which is exactly what is should be\n\n',char(an))
+
+% Part B
+fprintf('Part B\n\n')
+figure
+ezplot(yp)
+axis([-1 3 0 6])
+title('Problem 2 - Part B')
+ylabel('y(t)')
+fprintf('The solution graph for t=0, y(t) approaches 0. The solution graph for large t''s, y(t) approaches Inf\n\n')
+
+
+% Part C
+fprintf('Part C\n\n')
+clear ySol(t)
+figure
+hold on
+for i= -3:3
+    cond = y(1) == i;
+    ySol(t) = dsolve(eqn,cond);
+    ezplot(ySol(t))
+end
+axis([-3 3 -10 10])
+title('Problem 2 - Part C')
+ylabel('y(t)')
+fprintf('See graphs for C\n\n')
+
+% Part D
+fprintf('Part D\n\n')
+fprintf('As the graphs approach t=0, the graphs diverge. For larg t''s, the graphs begin to approach Inf\n')
+fprintf('Yes there is a singularity, for the condition y(t) = 1, the graph does not diverge at t=0\n')
+
+%% Problem 4
+clear;
+fprintf('Problem 4\n\n')
+syms y(t)
+eqn = diff(y,t) - 2*y == sin(2*t);
+figure
+hold on
+
+for i = -0.5:.05:0
+    cond = y(1) == i;
+    ySol(t) = dsolve(eqn,cond);
+    ezplot(ySol(t))
+end
+axis([0 4 -5 5])
+title('Problem 4')
+ylabel('y')
+
+fprintf('As t increases, the slope increaces. ')
+fprintf('The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.35), the slope begins positive then becomes negative. (c = -.3,-.25,-.2,-.15) ')
+fprintf('and the third is the slope is always positive (c = -.1, -.05, 0)\n\n')
+%% Problem 9
+clear;
+fprintf('Problem 9\n\n')
+syms r k y(t) a(t)
+
+% Part A
+fprintf('Part A\n')
+a = diff(y,t) == r*y - k * y^2;
+aANS(t) = dsolve(a);
+fprintf('The solutions for %s are:\n', char(a))
+display(aANS(t))
+
+% Part B
+fprintf('\nPart B\n')
+b = diff(y,t) == t*(t^2+1)/(4*y^3);
+bANS = dsolve(b, y(0) == -1/sqrt(2));
+fprintf('The solution to %s with y(0) = -1/sqrt(2) is\n %s\n\n',char(b), char(bANS))
+
+% Part C
+c = (exp(t)*sin(y)+3*y)/(3*t-exp(t)*sin(y)) == diff(y,t);
+% dsolve(c)
+
+% Part D
+d = diff(y,t) == (2*y-y)/(2*t-y);
+dsolve(d)
+
+% Part E
+fprintf('Part E\n')
+e = diff(y,t) == (2*t+y)/(3+3*y^2-t);
+eANS = dsolve(e,y(0)==0);
+fprintf('The solution for %s is:\n %s\n\n',char(e),char(eANS))
+
+%% Problem 12
+clear;
+fprintf('Problem 12\n\n')
+fzero(@f12,1)
+fzero(@f12,5)
+
+% Part B - It is obvious that a solution is y = t because lines approach
+% that line
+fprintf(['The solution is evident because ',...
+        'because vector fields point at t axis'])
+% Part C
+fprintf('Part C\n\n')
+syms y(t) c
+eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==c);
+fprintf('Solving y(0) = c\ny(t) = %s\n',char(eq))
+for i = -5:5
+    eq = dsolve(diff(y,t) == y^2 - t*y,y(0) ==i);
+    fprintf('Solving y(0) = %d\ny(t) = %s\n',i,char(eq))
+end
+%% Problem 15
+clear;
+fprintf('Problem 15\n\n')
+syms y(t) c
+
+% Part A
+fprintf('Part A\n\n')
+eqn = diff(y,t) == t * y^3;
+ansA = dsolve(eqn,y(0)==c);
+fprintf(['Using dsolve to solve %s with initial condition y(0) = c ', ...
+         'the solutions are\ny(t) = %s\ny(t) = %s\nI think Matlab g', ...
+         'ives two solutions because it gives the solution for posi', ...
+         'tive or negative values of c\n\n'] ...
+         , char(eqn),char(ansA(1)),char(ansA(2)))
+
+% Part B
+fprintf('Part B\n\n')
+fprintf('Substituting for c = 0\n')
+% Can't sub because of division by 0
+try
+    subs(ansA(1),c,0)
+    subs(ansA(2),c,0)
+catch
+    err = lasterror;
+    msg = err.message;
+    warning(msg)
+end
+
+l1 = limit(ansA(1),c,0);
+l2 = limit(ansA(2),c,0);
+fprintf('Taking the limit as c approaches c results in %s and %s\n\n' ...
+        ,l1,l2)
+
+% Part C
+fprintf('Part C\n\n')
+figure
+hold on
+for i = -5:5
+   ezplot(dsolve(eqn,y(0)==i))
+end
+
+axis([-5 5 -5 5])
+title('Problem 15 Part C')
+ylabel('y(t)')
+fprintf(['From looking at the plot, it appears that the solution is ', ...
+        'unstable because the plots diverge above\nand below t = 0\n'])
+
+
+
+
+##### SOURCE END #####
+-->
+</body>
+
+</html>
