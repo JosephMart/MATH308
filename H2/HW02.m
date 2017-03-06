@@ -45,7 +45,8 @@ fprintf('See graphs for C\n\n')
 
 % Part D
 fprintf('Part D\n\n')
-fprintf('As the graphs approach t=0, the graphs diverge. For larg t''s, the graphs begin to approach Inf\n')
+fprintf('As the graphs approach t=0, the graphs diverge. For larg t''s, the')
+fprintf('graphs begin to approach Inf\n')
 fprintf('Yes there is a singularity, for the condition y(t) = 1, the graph does not diverge at t=0\n')
 
 %% Problem 4
@@ -57,7 +58,7 @@ figure
 hold on
 
 for i = -0.5:.05:0
-    cond = y(1) == i;
+    cond = y(0) == i;
     ySol(t) = dsolve(eqn,cond);
     ezplot(ySol(t))
 end
@@ -66,8 +67,9 @@ title('Problem 4')
 ylabel('y')
 
 fprintf('As t increases, the slope increaces. ')
-fprintf('The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.35), the slope begins positive then becomes negative. (c = -.3,-.25,-.2,-.15) ')
-fprintf('and the third is the slope is always positive (c = -.1, -.05, 0)\n\n')
+fprintf('The 3 different behaviors are, slope is always negative (c = -.5,-.45,-.4,-.30)\n')
+fprintf(', the second is always positive (c = -.2,-.15,-.1, -.05, 0) and at')
+fprintf('-.25 there is oscillation\n\n')
 %% Problem 9
 clear;
 fprintf('Problem 9\n\n')
@@ -103,13 +105,15 @@ fprintf('The solution for %s is:\n %s\n\n',char(e),char(eANS))
 %% Problem 12
 clear;
 fprintf('Problem 12\n\n')
-fzero(@f12,1)
-fzero(@f12,5)
-
+a=fzero(@f12,1);
+b=fzero(@f12,3);
+c=fzero(@f12,5);
+fprintf(['Using fzero and a function I made f12 ,for the equation, we have ',...
+        'the following solutions\n%d\n%d\n%d\n\n' ],a,b,c)
 % Part B - It is obvious that a solution is y = t because lines approach
 % that line
 fprintf(['The solution is evident because ',...
-        'because vector fields point at t axis'])
+        'because vector fields point at t axis\n\n'])
 % Part C
 fprintf('Part C\n\n')
 syms y(t) c
@@ -130,7 +134,7 @@ eqn = diff(y,t) == t * y^3;
 ansA = dsolve(eqn,y(0)==c);
 fprintf(['Using dsolve to solve %s with initial condition y(0) = c ', ...
          'the solutions are\ny(t) = %s\ny(t) = %s\nI think Matlab g', ...
-         'ives two solutions because it gives the solution for posi', ...
+         'ives\n two solutions because it gives the solution for posi', ...
          'tive or negative values of c\n\n'] ...
          , char(eqn),char(ansA(1)),char(ansA(2)))
 
