@@ -17,7 +17,7 @@ fprintf('Problem 6\n\n')
 
 % Part A
 fprintf('Part A\n')
-clear all;
+clear;
 [pt,py] = ode45(@problem06,[1.5 6],[ .5 ]);
 [pt1,py1] = ode45(@problem06,[1.5 0],[ .5 ]);
 
@@ -72,19 +72,46 @@ hold off
 
 % Part C
 fprintf('Part C\n\n')
-figure; hold on;
-ezplot(f-c, [1.5, 100, -2, 10])
+figure; hold on; grid on;
+ezplot(f-c, [1.5, 10000, -2, 100])
 title('Problem 6 - Part C')
 xlabel('t')
 ylabel('y')
-fprintf('From looking at the graph, as t approaches inf, y approaches 8')
+fprintf('From looking at the graph, as t approaches inf, y approaches infinity\n\n')
 
 %% Problem 8
+fprintf('Problem 8\n\n')
+clear;
+% Part A
+fprintf('Part A\n\n Using dsolve, the solution is below')
+dsolve('Dy = exp(-t^2)', 't')
 
+% Part B
+syms t x
+diff(erf(t),x)
+help erf
 
+% Part C
+c = [ 0 1 10.5];
+erf(c)
 
+ezplot(erf(x), [-10 10])
 
+% Part D
+limit(erf(t),t,inf)
+int(exp(-t^2),-inf,inf)
 
-
+% Part E
+dsolve('Dy = 1 - 2*t*y','y(0)=0','t')
 
 %% Problem 17
+
+
+
+
+
+
+
+
+
+
