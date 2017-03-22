@@ -41,7 +41,6 @@ fprintf(' t \t     y\n')
 fprintf('-----------------\n')
 fprintf('0\t%.2d\n1\t%.2d\n1.8\t%.2d\n2.1\t%.2d\n\n',a,b,c,d)
 
-
 % Part B
 syms t y
 dsolve('Dy = (t - exp(-t))/(y + exp(y))','y(1.5) = .5' ,'t')
@@ -105,10 +104,20 @@ int(exp(-t^2),-inf,inf)
 dsolve('Dy = 1 - 2*t*y','y(0)=0','t')
 
 %% Problem 17
+clear;
+options = odeset('AbsTol', 1e-10, 'RelTol', 1e-10);
+sol = ode45(@problem17,[0 6],[ 0 ], options);
 
+t = 0.1:0.1:1;
+Ode45Solutions = deval(sol, t);
+erfFunc = erf(t);
+t = t';
 
+digits(10)
+Ode45Solutions = double(vpa(Ode45Solutions))';
+erfFunc = double(vpa(erfFunc))';
 
-
+T = table(t, Ode45Solutions ,erfFunc)
 
 
 
