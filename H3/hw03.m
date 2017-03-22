@@ -105,6 +105,7 @@ dsolve('Dy = 1 - 2*t*y','y(0)=0','t')
 
 %% Problem 17
 clear;
+format long
 options = odeset('AbsTol', 1e-10, 'RelTol', 1e-10);
 sol = ode45(@problem17,[0 6],[ 0 ], options);
 
