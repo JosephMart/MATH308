@@ -1,5 +1,3 @@
-%% Due 3/23/17 (page 131 ff) Problem Set C - 5, 6, 8, 17
-
 %% Problem 5
 fprintf('Problem 5\n\n')
 y0= 0.1:0.1:5; % initialising y(0)

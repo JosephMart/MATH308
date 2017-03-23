@@ -1,0 +1,740 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+    <title>Problem Set C by Joseph Michael Martinsen</title>
+    <meta name="generator" content="MATLAB 9.1">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2017-03-22">
+    <meta name="DC.source" content="hw03.m">
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        :focus {
+            outine: 0
+        }
+
+        ins {
+            text-decoration: none
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html {
+            min-height: 100%;
+            margin-bottom: 1px;
+        }
+
+        html body {
+            height: 100%;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #000;
+            line-height: 140%;
+            background: #fff none;
+            overflow-y: scroll;
+        }
+
+        html body td {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        h1 {
+            padding: 0px;
+            margin: 0px 0px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: #d55000;
+            line-height: 100%;
+            font-weight: normal;
+        }
+
+        h2 {
+            padding: 0px;
+            margin: 0px 0px 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+            border-bottom: 1px solid #d6d4d4;
+            display: block;
+        }
+
+        h3 {
+            padding: 0px;
+            margin: 0px 0px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+        }
+
+        a {
+            color: #005fce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005fce;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #004aa0;
+            text-decoration: none;
+        }
+
+        p {
+            padding: 0px;
+            margin: 0px 0px 20px;
+        }
+
+        img {
+            padding: 0px;
+            margin: 0px 0px 20px;
+            border: none;
+        }
+
+        p img,
+        pre img,
+        tt img,
+        li img,
+        h1 img,
+        h2 img {
+            margin-bottom: 0px;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px 0px 20px 23px;
+            list-style: square;
+        }
+
+        ul li {
+            padding: 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ul li ul {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 23px;
+        }
+
+        ul li ol li {
+            list-style: decimal;
+        }
+
+        ol {
+            padding: 0px;
+            margin: 0px 0px 20px 0px;
+            list-style: decimal;
+        }
+
+        ol li {
+            padding: 0px;
+            margin: 0px 0px 7px 23px;
+            list-style-type: decimal;
+        }
+
+        ol li ol {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ol li ol li {
+            list-style-type: lower-alpha;
+        }
+
+        ol li ul {
+            padding-top: 7px;
+        }
+
+        ol li ul li {
+            list-style: square;
+        }
+
+        .content {
+            font-size: 1.2em;
+            line-height: 140%;
+            padding: 20px;
+        }
+
+        pre,
+        code {
+            font-size: 12px;
+        }
+
+        tt {
+            font-size: 1.2em;
+        }
+
+        pre {
+            margin: 0px 0px 20px;
+        }
+
+        pre.codeinput {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            background: #f7f7f7;
+        }
+
+        pre.codeoutput {
+            padding: 10px 11px;
+            margin: 0px 0px 20px;
+            color: #4c4c4c;
+        }
+
+        pre.error {
+            color: red;
+        }
+
+        @media print {
+            pre.codeinput,
+            pre.codeoutput {
+                word-wrap: break-word;
+                width: 100%;
+            }
+        }
+
+        span.keyword {
+            color: #0000FF
+        }
+
+        span.comment {
+            color: #228B22
+        }
+
+        span.string {
+            color: #A020F0
+        }
+
+        span.untermstring {
+            color: #B20000
+        }
+
+        span.syscmd {
+            color: #B28C00
+        }
+
+        .footer {
+            width: auto;
+            padding: 10px 0px;
+            margin: 25px 0px 0px;
+            border-top: 1px dotted #878787;
+            font-size: 0.8em;
+            line-height: 140%;
+            font-style: italic;
+            color: #878787;
+            text-align: left;
+            float: none;
+        }
+
+        .footer p {
+            margin: 0px;
+        }
+
+        .footer a {
+            color: #878787;
+        }
+
+        .footer a:hover {
+            color: #878787;
+            text-decoration: underline;
+        }
+
+        .footer a:visited {
+            color: #878787;
+        }
+
+        table th {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: middle;
+            border: 1px solid #d6d4d4;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #d6d4d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Problem Set B <br> Joseph Michael Martinsen</h1>
+        <p>Math 308-510 <br>
+        <a href="http://www.math.tamu.edu/~michael.pilant/math308/index.html">
+            Michael Pilant
+        </a>
+        <h2>Contents</h2>
+        <div>
+            <ul>
+                <li><a href="#1">Problem 5</a></li>
+                <li><a href="#2">Problem 6</a></li>
+                <li><a href="#3">Problem 8</a></li>
+                <li><a href="#4">Problem 17</a></li>
+            </ul>
+        </div>
+        <h2 id="1">Problem 5</h2><pre class="codeinput">fprintf(<span class="string">'Problem 5\n\n'</span>)
+y0= 0.1:0.1:5; <span class="comment">% initialising y(0)</span>
+[t,y] = ode45(@problem05,[0 6],[ y0 ]);
+hold <span class="string">on</span>;
+plot(t,y);
+
+title(<span class="string">'Problem 5'</span>)
+xlabel(<span class="string">'t'</span>)
+ylabel(<span class="string">'y'</span>)
+hold <span class="string">off</span>;
+</pre><pre class="codeoutput">Problem 5
+
+Warning: Imaginary parts of complex X and/or Y arguments ignored
+</pre><img vspace="5" hspace="5" src="hw03_01.png" alt="">
+        <h2 id="2">Problem 6</h2><pre class="codeinput">fprintf(<span class="string">'Problem 6\n\n'</span>)
+
+<span class="comment">% Part A</span>
+fprintf(<span class="string">'Part A\n'</span>)
+clear;
+[pt,py] = ode45(@problem06,[1.5 6],[ .5 ]);
+[pt1,py1] = ode45(@problem06,[1.5 0],[ .5 ]);
+
+sol = ode45(@problem06,[1.5 6],[ .5 ]);
+sol1 = ode45(@problem06,[1.5 0],[ .5 ]);
+
+figure; hold <span class="string">on</span>; grid <span class="string">on</span>;
+plot(pt,py,<span class="string">'b'</span>);
+plot(pt1, py1, <span class="string">'b'</span>)
+title(<span class="string">'Problem 6 - Part A'</span>)
+xlabel(<span class="string">'t'</span>)
+ylabel(<span class="string">'y'</span>)
+hold <span class="string">off</span>;
+
+a = deval(sol1, 0);
+b = deval(sol1, 1);
+c = deval(sol, 1.8);
+d = deval(sol, 2.1);
+fprintf(<span class="string">'Actual Solutions\n'</span>)
+fprintf(<span class="string">' t \t     y\n'</span>)
+fprintf(<span class="string">'-----------------\n'</span>)
+fprintf(<span class="string">'0\t%.2d\n1\t%.2d\n1.8\t%.2d\n2.1\t%.2d\n\n'</span>,a,b,c,d)
+
+<span class="comment">% Part B</span>
+syms <span class="string">t</span> <span class="string">y</span>
+dsolve(<span class="string">'Dy = (t - exp(-t))/(y + exp(y))'</span>,<span class="string">'y(1.5) = .5'</span> ,<span class="string">'t'</span>)
+f = 1/exp(t) - exp(y) + t^2/2 - y^2/2;
+c = subs(f, [t, y], [1.5, 0.5]);
+
+figure; hold <span class="string">on</span>; grid <span class="string">on</span>;
+plot(pt,py,<span class="string">'b'</span>);
+plot(pt1, py1, <span class="string">'b'</span>)
+ezplot(f-c, [-1, 3, -2, 2])
+title(<span class="string">'Problem 6 - Part B'</span>)
+xlabel(<span class="string">'t'</span>)
+ylabel(<span class="string">'y'</span>)
+legend(<span class="string">'show'</span>)
+legend(<span class="string">'Actual Solution'</span>, <span class="string">'Actual Solution'</span>, <span class="string">'Numerical Solution'</span>)
+
+fprintf(<span class="string">'Numerical Solutions\n'</span>)
+fprintf(<span class="string">' t \t     y\n'</span>)
+fprintf(<span class="string">'-----------------\n'</span>)
+<span class="keyword">for</span> j = [0, 1, 1.8, 2.1]
+    f1 = @(y) eval(subs(f, t, j) - c);
+    y1 = fzero(f1, 0.5);
+    fprintf(<span class="string">'%.1d\t%.2d\n'</span>,j, double(y1))
+    plot(j, double(y1), <span class="string">'o'</span>)
+<span class="keyword">end</span>
+fprintf(<span class="string">'\nThe Actual and Numerical solutions are the same when rounded to 3 digits.\n\n'</span>)
+hold <span class="string">off</span>
+
+<span class="comment">% Part C</span>
+fprintf(<span class="string">'Part C\n\n'</span>)
+figure; hold <span class="string">on</span>; grid <span class="string">on</span>;
+ezplot(f-c, [1.5, 10000, -2, 100])
+title(<span class="string">'Problem 6 - Part C'</span>)
+xlabel(<span class="string">'t'</span>)
+ylabel(<span class="string">'y'</span>)
+fprintf(<span class="string">'From looking at the graph, as t approaches inf, y approaches infinity\n\n'</span>)
+</pre><pre class="codeoutput">Problem 6
+
+Part A
+Actual Solutions
+ t 	     y
+-----------------
+0	3.18e-01
+1	2.36e-01
+1.8	6.82e-01
+2.1	8.66e-01
+
+Warning: Explicit solution could not be found; implicit solution returned.
+
+ans =
+
+solve(2*exp(y) + y^2 == 2*exp(-t) + 2*exp(1/2) - 2*exp(-3/2) + t^2 - 2, y)
+
+Numerical Solutions
+ t 	     y
+-----------------
+0	3.18e-01
+1	2.36e-01
+1.8e+00	6.82e-01
+2.1e+00	8.66e-01
+
+The Actual and Numerical solutions are the same when rounded to 3 digits.
+
+Part C
+
+From looking at the graph, as t approaches inf, y approaches infinity
+
+</pre><img vspace="5" hspace="5" src="hw03_02.png" alt=""> <img vspace="5" hspace="5" src="hw03_03.png" alt=""> <img vspace="5" hspace="5" src="hw03_04.png" alt="">
+        <h2 id="3">Problem 8</h2><pre class="codeinput">fprintf(<span class="string">'Problem 8\n\n'</span>)
+clear;
+<span class="comment">% Part A</span>
+fprintf(<span class="string">'Part A\n\n Using dsolve, the solution is below'</span>)
+dsolve(<span class="string">'Dy = exp(-t^2)'</span>, <span class="string">'t'</span>)
+
+<span class="comment">% Part B</span>
+syms <span class="string">t</span> <span class="string">x</span>
+diff(erf(t),x)
+help <span class="string">erf</span>
+
+<span class="comment">% Part C</span>
+c = [ 0 1 10.5];
+erf(c)
+
+ezplot(erf(x), [-10 10])
+
+<span class="comment">% Part D</span>
+limit(erf(t),t,inf)
+int(exp(-t^2),-inf,inf)
+
+<span class="comment">% Part E</span>
+dsolve(<span class="string">'Dy = 1 - 2*t*y'</span>,<span class="string">'y(0)=0'</span>,<span class="string">'t'</span>)
+</pre><pre class="codeoutput">Problem 8
+
+Part A
+
+ Using dsolve, the solution is below
+ans =
+
+C5 + (pi^(1/2)*erf(t))/2
+
+
+ans =
+
+0
+
+ ERF Error function.
+    Y = ERF(X) is the error function for each element of X.  X must be
+    real. The error function is defined as:
+
+      erf(x) = 2/sqrt(pi) * integral from 0 to x of exp(-t^2) dt.
+
+    See also ERFC, ERFCX, ERFINV, ERFCINV.
+
+    Reference page in Doc Center
+       doc erf
+
+    Other functions named erf
+
+       codistributed/erf    gpuArray/erf    sym/erf
+
+
+ans =
+
+         0    0.8427    1.0000
+
+
+ans =
+
+1
+
+
+ans =
+
+pi^(1/2)
+
+
+ans =
+
+(pi^(1/2)*exp(-t^2)*erfi(t))/2
+
+</pre><img vspace="5" hspace="5" src="hw03_05.png" alt="">
+        <h2 id="4">Problem 17</h2><pre class="codeinput">clear;
+format <span class="string">long</span>
+options = odeset(<span class="string">'AbsTol'</span>, 1e-10, <span class="string">'RelTol'</span>, 1e-10);
+sol = ode45(@problem17,[0 6],[ 0 ], options);
+
+t = 0.1:0.1:1;
+Ode45Solutions = deval(sol, t);
+erfFunc = erf(t);
+t = t';
+
+digits(10)
+Ode45Solutions = double(vpa(Ode45Solutions))';
+erfFunc = double(vpa(erfFunc))';
+
+T = table(t, Ode45Solutions ,erfFunc)
+</pre><pre class="codeoutput">
+T =
+
+     t     Ode45Solutions      erfFunc
+    ___    ______________    ____________
+
+    0.1    0.1124629162       0.112462916
+    0.2    0.2227025894      0.2227025892
+    0.3    0.3286267596      0.3286267595
+    0.4    0.4283923552       0.428392355
+    0.5    0.5204998778      0.5204998778
+    0.6    0.6038560909      0.6038560908
+    0.7    0.6778011937      0.6778011938
+    0.8    0.7421009648      0.7421009647
+    0.9    0.7969082126      0.7969082124
+      1    0.8427007932      0.8427007929
+
+</pre>
+        <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p>
+    </div>
+    <!--
+##### SOURCE BEGIN #####
+%% Problem 5
+fprintf('Problem 5\n\n')
+y0= 0.1:0.1:5; % initialising y(0)
+[t,y] = ode45(@problem05,[0 6],[ y0 ]);
+hold on;
+plot(t,y);
+
+title('Problem 5')
+xlabel('t')
+ylabel('y')
+hold off;
+
+%% Problem 6
+fprintf('Problem 6\n\n')
+
+% Part A
+fprintf('Part A\n')
+clear;
+[pt,py] = ode45(@problem06,[1.5 6],[ .5 ]);
+[pt1,py1] = ode45(@problem06,[1.5 0],[ .5 ]);
+
+sol = ode45(@problem06,[1.5 6],[ .5 ]);
+sol1 = ode45(@problem06,[1.5 0],[ .5 ]);
+
+figure; hold on; grid on;
+plot(pt,py,'b');
+plot(pt1, py1, 'b')
+title('Problem 6 - Part A')
+xlabel('t')
+ylabel('y')
+hold off;
+
+a = deval(sol1, 0);
+b = deval(sol1, 1);
+c = deval(sol, 1.8);
+d = deval(sol, 2.1);
+fprintf('Actual Solutions\n')
+fprintf(' t \t     y\n')
+fprintf('REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-\n')
+fprintf('0\t%.2d\n1\t%.2d\n1.8\t%.2d\n2.1\t%.2d\n\n',a,b,c,d)
+
+% Part B
+syms t y
+dsolve('Dy = (t - exp(-t))/(y + exp(y))','y(1.5) = .5' ,'t')
+f = 1/exp(t) - exp(y) + t^2/2 - y^2/2;
+c = subs(f, [t, y], [1.5, 0.5]);
+
+figure; hold on; grid on;
+plot(pt,py,'b');
+plot(pt1, py1, 'b')
+ezplot(f-c, [-1, 3, -2, 2])
+title('Problem 6 - Part B')
+xlabel('t')
+ylabel('y')
+legend('show')
+legend('Actual Solution', 'Actual Solution', 'Numerical Solution')
+
+fprintf('Numerical Solutions\n')
+fprintf(' t \t     y\n')
+fprintf('REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-\n')
+for j = [0, 1, 1.8, 2.1]
+    f1 = @(y) eval(subs(f, t, j) - c);
+    y1 = fzero(f1, 0.5);
+    fprintf('%.1d\t%.2d\n',j, double(y1))
+    plot(j, double(y1), 'o')
+end
+fprintf('\nThe Actual and Numerical solutions are the same when rounded to 3 digits.\n\n')
+hold off
+
+% Part C
+fprintf('Part C\n\n')
+figure; hold on; grid on;
+ezplot(f-c, [1.5, 10000, -2, 100])
+title('Problem 6 - Part C')
+xlabel('t')
+ylabel('y')
+fprintf('From looking at the graph, as t approaches inf, y approaches infinity\n\n')
+
+%% Problem 8
+fprintf('Problem 8\n\n')
+clear;
+% Part A
+fprintf('Part A\n\n Using dsolve, the solution is below')
+dsolve('Dy = exp(-t^2)', 't')
+
+% Part B
+syms t x
+diff(erf(t),x)
+help erf
+
+% Part C
+c = [ 0 1 10.5];
+erf(c)
+
+ezplot(erf(x), [-10 10])
+
+% Part D
+limit(erf(t),t,inf)
+int(exp(-t^2),-inf,inf)
+
+% Part E
+dsolve('Dy = 1 - 2*t*y','y(0)=0','t')
+
+%% Problem 17
+clear;
+format long
+options = odeset('AbsTol', 1e-10, 'RelTol', 1e-10);
+sol = ode45(@problem17,[0 6],[ 0 ], options);
+
+t = 0.1:0.1:1;
+Ode45Solutions = deval(sol, t);
+erfFunc = erf(t);
+t = t';
+
+digits(10)
+Ode45Solutions = double(vpa(Ode45Solutions))';
+erfFunc = double(vpa(erfFunc))';
+
+T = table(t, Ode45Solutions ,erfFunc)
+
+
+
+
+
+
+
+##### SOURCE END #####
+-->
+</body>
+
+</html>
