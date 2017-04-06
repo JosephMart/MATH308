@@ -603,6 +603,26 @@ T =
       1    0.8427007932      0.8427007929
 
 </pre>
+<h1>Functions</h1>
+<h2>problem05</h2>
+<pre class="codeinput"><span class="keyword">function</span> [ dy] = problem05( t, y)
+    dy = y.*(1-log(y)).*(y-3);
+<span class="keyword">end</span>
+</pre>
+
+<h2>problem06</h2>
+<pre class="codeinput"><span class="keyword">function</span> [ dy] = problem06( t, y)
+    dy = (t - exp(-t))/(y + exp(y));
+
+<span class="keyword">end</span>
+</pre>
+
+<h2>problem17</h2>
+<pre class="codeinput"><span class="keyword">function</span> [ dy] = problem17( t, y)
+    dy = 2*exp(-t.^2)/pi^(.5);
+
+<span class="keyword">end</span>
+</pre>
         <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p>
     </div>
     <!--
