@@ -1,0 +1,838 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+    <title>Due 4/6/17 (page 157 ff) Problem Set D - 3, 7, 11, 16</title>
+    <meta name="generator" content="MATLAB 9.1">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.date" content="2017-04-06">
+    <meta name="DC.source" content="hw04.m">
+    <style type="text/css">
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        :focus {
+            outine: 0
+        }
+
+        ins {
+            text-decoration: none
+        }
+
+        del {
+            text-decoration: line-through
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html {
+            min-height: 100%;
+            margin-bottom: 1px;
+        }
+
+        html body {
+            height: 100%;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #000;
+            line-height: 140%;
+            background: #fff none;
+            overflow-y: scroll;
+        }
+
+        html body td {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        h1 {
+            padding: 0px;
+            margin: 0px 0px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: #d55000;
+            line-height: 100%;
+            font-weight: normal;
+        }
+
+        h2 {
+            padding: 0px;
+            margin: 0px 0px 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+            border-bottom: 1px solid #d6d4d4;
+            display: block;
+        }
+
+        h3 {
+            padding: 0px;
+            margin: 0px 0px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1em;
+            color: #000;
+            font-weight: bold;
+            line-height: 140%;
+        }
+
+        a {
+            color: #005fce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005fce;
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #004aa0;
+            text-decoration: none;
+        }
+
+        p {
+            padding: 0px;
+            margin: 0px 0px 20px;
+        }
+
+        img {
+            padding: 0px;
+            margin: 0px 0px 20px;
+            border: none;
+        }
+
+        p img,
+        pre img,
+        tt img,
+        li img,
+        h1 img,
+        h2 img {
+            margin-bottom: 0px;
+        }
+
+        ul {
+            padding: 0px;
+            margin: 0px 0px 20px 23px;
+            list-style: square;
+        }
+
+        ul li {
+            padding: 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ul li ul {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 23px;
+        }
+
+        ul li ol li {
+            list-style: decimal;
+        }
+
+        ol {
+            padding: 0px;
+            margin: 0px 0px 20px 0px;
+            list-style: decimal;
+        }
+
+        ol li {
+            padding: 0px;
+            margin: 0px 0px 7px 23px;
+            list-style-type: decimal;
+        }
+
+        ol li ol {
+            padding: 5px 0px 0px;
+            margin: 0px 0px 7px 0px;
+        }
+
+        ol li ol li {
+            list-style-type: lower-alpha;
+        }
+
+        ol li ul {
+            padding-top: 7px;
+        }
+
+        ol li ul li {
+            list-style: square;
+        }
+
+        .content {
+            font-size: 1.2em;
+            line-height: 140%;
+            padding: 20px;
+        }
+
+        pre,
+        code {
+            font-size: 12px;
+        }
+
+        tt {
+            font-size: 1.2em;
+        }
+
+        pre {
+            margin: 0px 0px 20px;
+        }
+
+        pre.codeinput {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            background: #f7f7f7;
+        }
+
+        pre.codeoutput {
+            padding: 10px 11px;
+            margin: 0px 0px 20px;
+            color: #4c4c4c;
+        }
+
+        pre.error {
+            color: red;
+        }
+
+        @media print {
+            pre.codeinput,
+            pre.codeoutput {
+                word-wrap: break-word;
+                width: 100%;
+            }
+        }
+
+        span.keyword {
+            color: #0000FF
+        }
+
+        span.comment {
+            color: #228B22
+        }
+
+        span.string {
+            color: #A020F0
+        }
+
+        span.untermstring {
+            color: #B20000
+        }
+
+        span.syscmd {
+            color: #B28C00
+        }
+
+        .footer {
+            width: auto;
+            padding: 10px 0px;
+            margin: 25px 0px 0px;
+            border-top: 1px dotted #878787;
+            font-size: 0.8em;
+            line-height: 140%;
+            font-style: italic;
+            color: #878787;
+            text-align: left;
+            float: none;
+        }
+
+        .footer p {
+            margin: 0px;
+        }
+
+        .footer a {
+            color: #878787;
+        }
+
+        .footer a:hover {
+            color: #878787;
+            text-decoration: underline;
+        }
+
+        .footer a:visited {
+            color: #878787;
+        }
+
+        table th {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: middle;
+            border: 1px solid #d6d4d4;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 7px 5px;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #d6d4d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Problem Set D <br> Joseph Michael Martinsen</h1>
+        <p>Math 308-510 <br>
+        <a href="http://www.math.tamu.edu/~michael.pilant/math308/index.html">
+            Michael Pilant
+        </a>
+        <!--introduction-->
+        <!--/introduction-->
+        <h2>Contents</h2>
+        <div>
+            <ul>
+                <li><a href="#1">Problem 3</a></li>
+                <li><a href="#2">Problem 7</a></li>
+                <li><a href="#3">Problem 11</a></li>
+                <li><a href="#4">Problem 16</a></li>
+            </ul>
+        </div>
+        <h2 id="1">Problem 3</h2><pre class="codeinput">clear;
+
+<span class="comment">% Part A</span>
+<span class="comment">% y'' + sin(y) = 0</span>
+rhs = @(t,y) [y(2); - sin(y(1))];
+figure; hold <span class="string">on</span>;
+<span class="comment">% Amplitude values</span>
+A = [.1 .7 1.5 3];
+<span class="comment">% Colors for the Graph</span>
+C = [<span class="string">'c'</span> <span class="string">'r'</span> <span class="string">'g'</span> <span class="string">'b'</span> <span class="string">'w'</span>];
+fprintf(<span class="string">'Problem 3\n\nPart A\n\n'</span>)
+<span class="keyword">for</span> i = 1:4
+    [xa, ya ]= ode45(rhs,[0 8], [A(i) ; 0]);
+    p(i) = findPeriod(xa, ya(:,1),0);
+    plot(xa,ya(:,1),C(i))
+    [xa, ya ]= ode45(rhs,[0 -8], [A(i) ; 0]);
+    plot(xa,ya(:,1),C(i))
+    fprintf(<span class="string">'Estimated Period for A = %.2f is %.5f\n\n'</span>, A(i), p(i))
+<span class="keyword">end</span>
+axis([-8 8 -4 4])
+title(<span class="string">'Problem 3 - Part A'</span>)
+grid <span class="string">minor</span>
+
+<span class="comment">% Part B</span>
+fprintf(<span class="string">'\nPart B\n\n'</span>)
+<span class="keyword">for</span> i = 1:4
+    F = @(x) 1./sqrt(1 - sin(A(i)./2).^2 * sin(x).^2);
+    Q = 4 * quad(F,0,pi/2);
+    fprintf(<span class="string">'Using elliptic integral for A = %.2f I get %.5f\n'</span>, A(i), Q)
+    fprintf(<span class="string">'This value is %.4f different from the value in A\n\n'</span>, abs(p(i) - Q))
+<span class="keyword">end</span>
+
+<span class="comment">% partc C</span>
+fprintf(<span class="string">'Part C\n\n'</span>)
+figure; hold <span class="string">on</span>;
+<span class="comment">% Amplitude values</span>
+A = [.6 .8 .9 1];
+<span class="comment">% Colors for the Graph</span>
+
+<span class="keyword">for</span> i = 1:4
+    [xa, ya ]= ode45(rhs,[0 8], [A(i) ; 0]);
+    p(i) = findPeriod(xa, ya(:,1),0);
+    plot(xa,ya(:,1),C(i))
+    [xa, ya ]= ode45(rhs,[0 -8], [A(i) ; 0]);
+    plot(xa,ya(:,1),C(i))
+    fprintf(<span class="string">'Estimated Period for A = %.2f is %.5f\n\n'</span>, A(i), p(i))
+<span class="keyword">end</span>
+axis([-8 8 -4 4])
+title(<span class="string">'Problem 3 - Part C'</span>)
+grid <span class="string">minor</span>
+
+<span class="keyword">for</span> i = 1:4
+    F = @(x) 1./sqrt(1 - sin(A(i)./2).^2 * sin(x).^2);
+    Q = 4 * quad(F,0,pi/2);
+    fprintf(<span class="string">'Using elliptic integral for A = %.2f I get %.5f\n'</span>, A(i), Q)
+    fprintf(<span class="string">'This value is %.4f different from the value in C before\n\n'</span>, abs(p(i) - Q))
+<span class="keyword">end</span>
+
+<span class="comment">% Part D</span>
+fprintf(<span class="string">'Part D\n\n'</span>)
+fprintf(<span class="string">'The change in the period is not much for values of A &lt; 2. Once A&gt;2 the period shoots up\n'</span>)
+</pre><pre class="codeoutput">Problem 3
+
+Part A
+
+Estimated Period for A = 0.10 is 5.90021
+
+Estimated Period for A = 0.70 is 6.54814
+
+Estimated Period for A = 1.50 is 7.54754
+
+Estimated Period for A = 3.00 is 15.77415
+
+
+Part B
+
+Using elliptic integral for A = 0.10 I get 6.28711
+This value is 0.3869 different from the value in A
+
+Using elliptic integral for A = 0.70 I get 6.48119
+This value is 0.0670 different from the value in A
+
+Using elliptic integral for A = 1.50 I get 7.30087
+This value is 0.2467 different from the value in A
+
+Using elliptic integral for A = 3.00 I get 16.15556
+This value is 0.3814 different from the value in A
+
+Part C
+
+Estimated Period for A = 0.60 is 6.67824
+
+Estimated Period for A = 0.80 is 6.48574
+
+Estimated Period for A = 0.90 is 6.48009
+
+Estimated Period for A = 1.00 is 6.52801
+
+Using elliptic integral for A = 0.60 I get 6.42754
+This value is 0.2507 different from the value in C before
+
+Using elliptic integral for A = 0.80 I get 6.54413
+This value is 0.0584 different from the value in C before
+
+Using elliptic integral for A = 0.90 I get 6.61687
+This value is 0.1368 different from the value in C before
+
+Using elliptic integral for A = 1.00 I get 6.69998
+This value is 0.1720 different from the value in C before
+
+Part D
+
+The change in the period is not much for values of A &lt; 2. Once A&gt;2 the period shoots up
+</pre><img vspace="5" hspace="5" src="hw04_01.png" alt=""> <img vspace="5" hspace="5" src="hw04_02.png" alt="">
+        <h2 id="2">Problem 7</h2>
+        <p>clear; G = 32; M = 195/G; % rhs = @(t,y) [y(2); -sqrt((1 + y(1)) * (32) / (0.005/M + 0.5))]; rhs = @(t,y) [y(2); -sqrt((M*G*y(1) - M*G) / (.5*M + 0.005) )]; [xa, ya ]= ode45( ); a = ode45(rhs,[0 5], [1000 ; 0]); deval(a,0)</p>
+        <h2 id="3">Problem 11</h2><pre class="codeinput">clear;
+fprintf(<span class="string">'Problem 11\n\n'</span>)
+syms <span class="string">y(t)</span>
+k = 1;
+m = k;
+lam = 0;
+i = [0 .1 .2 .3];
+j = 1;
+
+<span class="keyword">for</span> ep = i
+    [V] = odeToVectorField(m * diff(y, 2) + lam * diff(y,1) + k * y + ep * y ^ 3 == 0);
+    M = matlabFunction(V,<span class="string">'vars'</span>, {<span class="string">'t'</span>,<span class="string">'Y'</span>});
+    sol = ode45(M,[0 20], [0;1]);
+    [xa, ya] = ode45(M,[0 20], [0;1]);
+    p(j) = findPeriod(xa, ya(:,1),11);
+    a(j) = findAmplitude(ya);
+    fprintf(<span class="string">'For epsilon = %.1f the estimated Amplitude is %.3f and Period is %.3f\n\n'</span>, ep, a(j), p(j))
+    j = j + 1;
+    figure
+    fplot(@(x)deval(sol,x,1), [0, 20])
+    title([<span class="string">'Problem 11 epsilon = '</span> num2str(ep)]);
+<span class="keyword">end</span>
+
+figure; hold <span class="string">on</span>;
+plot(p,i)
+plot(a,i)
+title(<span class="string">'Period and Amplitude vs epsilon'</span>)
+hold <span class="string">off</span>
+
+<span class="comment">% repeat for negative values</span>
+fprintf(<span class="string">'Now for negative Values of epsilon\n\n'</span>)
+i = [0 -.1 -.2 -.3];
+j = 1;
+<span class="comment">% for epsilon = 0</span>
+
+<span class="keyword">for</span> ep = i
+    [V] = odeToVectorField(m * diff(y, 2) + lam * diff(y,1) + k * y + ep * y ^ 3 == 0);
+    M = matlabFunction(V,<span class="string">'vars'</span>, {<span class="string">'t'</span>,<span class="string">'Y'</span>});
+    sol = ode45(M,[0 20], [0;1]);
+    [xa, ya] = ode45(M,[0 20], [0;1]);
+    p2(j) = findPeriod(xa, ya(:,1),11);
+    a2(j) = findAmplitude(ya);
+    fprintf(<span class="string">'For epsilon = %.1f the estimated Amplitude is %.3f and Period is %.3f\n\n'</span>, ep, a2(j), p2(j))
+    j = j + 1;
+    figure
+    fplot(@(x)deval(sol,x,1), [0, 20])
+    title([<span class="string">'Problem 11 epsilon = '</span> num2str(ep)]);
+<span class="keyword">end</span>
+
+figure; hold <span class="string">on</span>;
+plot(p2,i)
+plot(a2,i)
+title(<span class="string">'Period and Amplitude vs -epsilon'</span>)
+</pre><pre class="codeoutput">Problem 11
+
+For epsilon = 0.0 the estimated Amplitude is 0.990 and Period is 6.487
+
+For epsilon = 0.1 the estimated Amplitude is 0.962 and Period is 6.213
+
+For epsilon = 0.2 the estimated Amplitude is 0.957 and Period is 6.012
+
+For epsilon = 0.3 the estimated Amplitude is 0.939 and Period is 5.858
+
+Now for negative Values of epsilon
+
+For epsilon = 0.0 the estimated Amplitude is 0.990 and Period is 6.487
+
+For epsilon = -0.1 the estimated Amplitude is 1.021 and Period is 6.470
+
+For epsilon = -0.2 the estimated Amplitude is 1.057 and Period is 6.984
+
+For epsilon = -0.3 the estimated Amplitude is 1.093 and Period is 7.551
+
+</pre><img vspace="5" hspace="5" src="hw04_03.png" alt=""> <img vspace="5" hspace="5" src="hw04_04.png" alt=""> <img vspace="5" hspace="5" src="hw04_05.png" alt=""> <img vspace="5" hspace="5" src="hw04_06.png" alt="">
+        <img vspace="5" hspace="5" src="hw04_07.png"
+            alt=""> <img vspace="5" hspace="5" src="hw04_08.png" alt=""> <img vspace="5" hspace="5" src="hw04_09.png" alt=""> <img vspace="5" hspace="5" src="hw04_10.png" alt=""> <img vspace="5" hspace="5" src="hw04_11.png" alt="">
+            <img vspace="5" hspace="5" src="hw04_12.png"
+                alt="">
+                <h2 id="4">Problem 16</h2><pre class="codeinput">fprintf(<span class="string">'Problem 16\n\n'</span>)
+fprintf(<span class="string">'Part A'</span>)
+<span class="comment">% Part A</span>
+syms <span class="string">y(x)</span>
+syms <span class="string">x</span>
+firstOrder = @(x, z) cos(z).^2 - ( x .* sin(z).^2);
+[X, Z] = meshgrid(-10:.5:5, -pi/2:.2:pi/2);
+W = firstOrder(X,Z);
+l = sqrt(1 + W.^2);
+quiver(X, Z, 1./l, W./l, .5)
+axis <span class="string">tight</span>
+title(<span class="string">'Problem 16 - Part A'</span>)
+fprintf(<span class="string">'To the left x-axis, the field looks the same. To the right, a \n'</span>)
+fprintf(<span class="string">'siniosodal nature occurs. The zeros of the solution occur \n'</span>)
+fprintf(<span class="string">'towards x-&gt; -inf and happen in 0.5 increments. It appears one or less intersections would occur.\n'</span>)
+fprintf(<span class="string">' The solutions oscillitate towards negative infinity but not infinity.'</span>)
+
+<span class="comment">% Part B</span>
+figure; hold <span class="string">on</span>;
+<span class="keyword">for</span> x = -10:5
+    [V] = odeToVectorField(diff(y, 2) == y*airy(0,x));
+    M = matlabFunction(V,<span class="string">'vars'</span>, {<span class="string">'x'</span>,<span class="string">'Y'</span>});
+    <span class="keyword">for</span> i = -1:1
+        <span class="keyword">for</span> j = -1:1
+            sol = ode45(M,[-10 5], [i;j]);
+            fplot(@(x)deval(sol,x,1), [-10, 5])
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+axis([-10 5 -80 80])
+title([<span class="string">'Part B'</span>])
+
+fprintf(<span class="string">'The plots do not appear to be exactly the same'</span>)
+</pre><pre class="codeoutput">Problem 16
+
+Part ATo the left x-axis, the field looks the same. To the right, a
+siniosodal nature occurs. The zeros of the solution occur
+towards x-&gt; -inf and happen in 0.5 increments. It appears one or less intersections would occur.
+ </pre><img vspace="5" hspace="5" src="hw04_13.png" alt=""> <img vspace="5" hspace="5" src="hw04_14.png" alt="">
+
+
+<h2 id="4">findPeriod() Function</h2>
+ <div class="content"><pre class="codeinput"><span class="keyword">function</span> [ p ] = findPeriod( x, y, t)
+<span class="comment">%findPeriod finds the period of the input values by finding where y crosses</span>
+<span class="comment">%   the y axis, then averaging the next and previous x coordinate value</span>
+<span class="comment">%   then multiplies that by 4</span>
+    i = 2;
+
+    <span class="keyword">while</span> y(i) &gt; 0
+       i = i + 1;
+    <span class="keyword">end</span>
+
+    <span class="keyword">if</span> t == 11
+        p = (x(i-1) + x(i));
+    <span class="keyword">else</span>
+        p = (x(i-1) + x(i)) * 2;
+    <span class="keyword">end</span>
+
+
+<span class="keyword">end</span>
+</pre>
+
+<h2 id="4">findAmplitdue() Function</h2>
+<pre class="codeinput"><span class="keyword">function</span> [ amp ] = findAmplitude( y )
+<span class="comment">% findAmplitude</span>
+
+    i = 1;
+
+    <span class="keyword">while</span> y(i,2) &gt; 0
+        i = i + 1;
+    <span class="keyword">end</span>
+
+    amp = y(i,1);
+
+
+<span class="keyword">end</span>
+</pre>
+
+                <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p>
+    </div>
+    <!--
+
+##### SOURCE BEGIN #####
+%% Due 4/6/17 (page 157 ff) Problem Set D - 3, 7, 11, 16
+
+%% Problem 3
+clear;
+
+% Part A
+% y'' + sin(y) = 0
+rhs = @(t,y) [y(2); - sin(y(1))];
+figure; hold on;
+% Amplitude values
+A = [.1 .7 1.5 3];
+% Colors for the Graph
+C = ['c' 'r' 'g' 'b' 'w'];
+fprintf('Problem 3\n\nPart A\n\n')
+for i = 1:4
+    [xa, ya ]= ode45(rhs,[0 8], [A(i) ; 0]);
+    p(i) = findPeriod(xa, ya(:,1),0);
+    plot(xa,ya(:,1),C(i))
+    [xa, ya ]= ode45(rhs,[0 -8], [A(i) ; 0]);
+    plot(xa,ya(:,1),C(i))
+    fprintf('Estimated Period for A = %.2f is %.5f\n\n', A(i), p(i))
+end
+axis([-8 8 -4 4])
+title('Problem 3 - Part A')
+grid minor
+
+% Part B
+fprintf('\nPart B\n\n')
+for i = 1:4
+    F = @(x) 1./sqrt(1 - sin(A(i)./2).^2 * sin(x).^2);
+    Q = 4 * quad(F,0,pi/2);
+    fprintf('Using elliptic integral for A = %.2f I get %.5f\n', A(i), Q)
+    fprintf('This value is %.4f different from the value in A\n\n', abs(p(i) - Q))
+end
+
+% partc C
+fprintf('Part C\n\n')
+figure; hold on;
+% Amplitude values
+A = [.6 .8 .9 1];
+% Colors for the Graph
+
+for i = 1:4
+    [xa, ya ]= ode45(rhs,[0 8], [A(i) ; 0]);
+    p(i) = findPeriod(xa, ya(:,1),0);
+    plot(xa,ya(:,1),C(i))
+    [xa, ya ]= ode45(rhs,[0 -8], [A(i) ; 0]);
+    plot(xa,ya(:,1),C(i))
+    fprintf('Estimated Period for A = %.2f is %.5f\n\n', A(i), p(i))
+end
+axis([-8 8 -4 4])
+title('Problem 3 - Part C')
+grid minor
+
+for i = 1:4
+    F = @(x) 1./sqrt(1 - sin(A(i)./2).^2 * sin(x).^2);
+    Q = 4 * quad(F,0,pi/2);
+    fprintf('Using elliptic integral for A = %.2f I get %.5f\n', A(i), Q)
+    fprintf('This value is %.4f different from the value in C before\n\n', abs(p(i) - Q))
+end
+
+% Part D
+fprintf('Part D\n\n')
+fprintf('The change in the period is not much for values of A < 2. Once A>2 the period shoots up\n')
+
+%% Problem 7
+% clear;
+% G = 32;
+% M = 195/G;
+% % rhs = @(t,y) [y(2); -sqrt((1 + y(1)) * (32) / (0.005/M + 0.5))];
+% rhs = @(t,y) [y(2); -sqrt((M*G*y(1) - M*G) / (.5*M + 0.005) )];
+% [xa, ya ]= ode45( );
+% a = ode45(rhs,[0 5], [1000 ; 0]);
+% deval(a,0)
+
+%% Problem 11
+clear;
+fprintf('Problem 11\n\n')
+syms y(t)
+k = 1;
+m = k;
+lam = 0;
+i = [0 .1 .2 .3];
+j = 1;
+
+for ep = i
+    [V] = odeToVectorField(m * diff(y, 2) + lam * diff(y,1) + k * y + ep * y ^ 3 == 0);
+    M = matlabFunction(V,'vars', {'t','Y'});
+    sol = ode45(M,[0 20], [0;1]);
+    [xa, ya] = ode45(M,[0 20], [0;1]);
+    p(j) = findPeriod(xa, ya(:,1),11);
+    a(j) = findAmplitude(ya);
+    fprintf('For epsilon = %.1f the estimated Amplitude is %.3f and Period is %.3f\n\n', ep, a(j), p(j))
+    j = j + 1;
+    figure
+    fplot(@(x)deval(sol,x,1), [0, 20])
+    title(['Problem 11 epsilon = ' num2str(ep)]);
+end
+
+figure; hold on;
+plot(p,i)
+plot(a,i)
+title('Period and Amplitude vs epsilon')
+hold off
+
+% repeat for negative values
+fprintf('Now for negative Values of epsilon\n\n')
+i = [0 -.1 -.2 -.3];
+j = 1;
+% for epsilon = 0
+
+for ep = i
+    [V] = odeToVectorField(m * diff(y, 2) + lam * diff(y,1) + k * y + ep * y ^ 3 == 0);
+    M = matlabFunction(V,'vars', {'t','Y'});
+    sol = ode45(M,[0 20], [0;1]);
+    [xa, ya] = ode45(M,[0 20], [0;1]);
+    p2(j) = findPeriod(xa, ya(:,1),11);
+    a2(j) = findAmplitude(ya);
+    fprintf('For epsilon = %.1f the estimated Amplitude is %.3f and Period is %.3f\n\n', ep, a2(j), p2(j))
+    j = j + 1;
+    figure
+    fplot(@(x)deval(sol,x,1), [0, 20])
+    title(['Problem 11 epsilon = ' num2str(ep)]);
+end
+
+figure; hold on;
+plot(p2,i)
+plot(a2,i)
+title('Period and Amplitude vs -epsilon')
+
+%% Problem 16
+fprintf('Problem 16\n\n')
+fprintf('Part A')
+% Part A
+syms y(x)
+syms x
+firstOrder = @(x, z) cos(z).^2 - ( x .* sin(z).^2);
+[X, Z] = meshgrid(-10:.5:5, -pi/2:.2:pi/2);
+W = firstOrder(X,Z);
+l = sqrt(1 + W.^2);
+quiver(X, Z, 1./l, W./l, .5)
+axis tight
+title('Problem 16 - Part A')
+fprintf('To the left x-axis, the field looks the same. To the right, a \n')
+fprintf('siniosodal nature occurs. The zeros of the solution occur \n')
+fprintf('towards x-> -inf and happen in 0.5 increments. It appears one or less intersections would occur.\n')
+fprintf(' The solutions oscillitate towards negative infinity but not infinity.')
+
+% Part B
+figure; hold on;
+for x = -10:5
+    [V] = odeToVectorField(diff(y, 2) == y*airy(0,x));
+    M = matlabFunction(V,'vars', {'x','Y'});
+    for i = -1:1
+        for j = -1:1
+            sol = ode45(M,[-10 5], [i;j]);
+            fplot(@(x)deval(sol,x,1), [-10, 5])
+        end
+    end
+end
+axis([-10 5 -80 80])
+title(['Part B'])
+
+fprintf('The plots do not appear to be exactly the same')
+
+##### SOURCE END #####
+-->
+</body>
+
+</html>

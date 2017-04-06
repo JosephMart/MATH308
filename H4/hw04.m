@@ -62,15 +62,16 @@ end
 % Part D
 fprintf('Part D\n\n')
 fprintf('The change in the period is not much for values of A < 2. Once A>2 the period shoots up\n')
+
 %% Problem 7
-clear;
-G = 32;
-M = 195/G;
-% rhs = @(t,y) [y(2); -sqrt((1 + y(1)) * (32) / (0.005/M + 0.5))];
-rhs = @(t,y) [y(2); -sqrt((M*G*y(1) - M*G) / (.5*M + 0.005) )];
-[xa, ya ]= ode45(rhs,[0 5], [1000 ; 0]);
-a = ode45(rhs,[0 5], [1000 ; 0]);
-deval(a,0)
+% clear;
+% G = 32;
+% M = 195/G;
+% % rhs = @(t,y) [y(2); -sqrt((1 + y(1)) * (32) / (0.005/M + 0.5))];
+% rhs = @(t,y) [y(2); -sqrt((M*G*y(1) - M*G) / (.5*M + 0.005) )];
+% [xa, ya ]= ode45( );
+% a = ode45(rhs,[0 5], [1000 ; 0]);
+% deval(a,0)
 
 %% Problem 11
 clear;
@@ -158,6 +159,6 @@ for x = -10:5
     end
 end
 axis([-10 5 -80 80])
-title(['Part B\n\n'])
+title(['Part B'])
 
 fprintf('The plots do not appear to be exactly the same')
