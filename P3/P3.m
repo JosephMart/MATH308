@@ -37,17 +37,15 @@ E=PE+KE;
 x = L1* sin( y(:,1)) + L2*sin(y(:,3));
 yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
 
-% Plot
+% Plots
 plot(x, yplot);
  axis([-3 3 -3 2])
 title('Double Pendulum')
 figure;
 plot(t,y(:,1));
-%axis([0 100 -10 30])
 title('Theta 1 vs Time')
 figure;
 plot(t,y(:,3));
-%axis([0 100 -50 40])
 title('Theta 2 vs Time')
 figure;
 plot(t,PE);
@@ -101,17 +99,14 @@ E=PE+KE;
 x = L1* sin( y(:,1)) + L2*sin(y(:,3));
 yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
 
-% Plot
+% Plots
 plot(x, yplot);
- %axis([-3 3 -3 2])
 title('Double Pendulum')
 figure;
 plot(t,y(:,1));
-%axis([0 100 -10 30])
 title('Theta 1 vs Time')
 figure;
 plot(t,y(:,3));
-%axis([0 100 -50 40])
 title('Theta 2 vs Time')
 figure;
 plot(t,PE);
@@ -135,18 +130,18 @@ clc;
 
 % Constents
 g  = 32;
-m1 = 2;
-m2 = 2;
-L1 = 2;
-L2 = 2;
+m1 = 1.5;
+m2 = 1;
+L1 = 1;
+L2 = 1.5;
 
-fprintf('For case 3, the mass and length will differ from Case 1.\n')
-fprintf('The following inital values are used\nm1 = 5\n')
-fprintf('m2 = 1\nL1 = 1\nL2 = 5\nu1 = 1.57\nu1prime = 0\nv1 = 3.14\nv1prime = 0')
+fprintf('For case 3, the mass and length differ from Case 1.\n')
+fprintf('The following inital values are used\nm1 = 1.5\n')
+fprintf('m2 = 1\nL1 = 1\nL2 = 1.5\nu1 = 1\nu1prime = 0\nv1 = 3\nv1prime = 0')
 
-u1       = 1.57;
+u1       = 1;
 u1_prime = 0;
-v1       = 3.14;
+v1       = 3;
 v1_prime = 0;
 
 % Solve Differential Equation
@@ -165,17 +160,14 @@ E=PE+KE;
 x = L1* sin( y(:,1)) + L2*sin(y(:,3));
 yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
 
-% Plot
+% Plots
 plot(x, yplot);
- %axis([-3 3 -3 2])
 title('Double Pendulum')
 figure;
 plot(t,y(:,1));
-%axis([0 100 -10 30])
 title('Theta 1 vs Time')
 figure;
 plot(t,y(:,3));
-%axis([0 100 -50 40])
 title('Theta 2 vs Time')
 figure;
 plot(t,PE);
@@ -183,12 +175,3 @@ title('Potential Energy')
 figure;
 plot(t,KE);
 title('Kinetic Energy')
-figure;
-plot(t,E);
-title('Total Energy')
-figure;
-plot(t,E);
-title('Total Energy')
-axis([0 100 0 100])
-
-fprintf('Total energy deviation %f %% \n', 100*(max(E)-min(E))/(max(E)))
