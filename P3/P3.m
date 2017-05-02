@@ -20,14 +20,10 @@ KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2
 
 % Total Energy
 E=PE+KE;
-% Plot Total Energy
-plot(t ,E);
-figure
 
-% l o c a t i o n o f end p o i n t o f d o u bl e pendulum
 x = L1* sin( y(:,1)) + L2*sin(y(:,3));
 y = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
-% p a r a m e t r i c p l o t
+
 plot(x, y);
 figure;
 plot(t ,y(:,1));
