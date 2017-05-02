@@ -1,0 +1,462 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Final Project by Joseph Martinsen</title><meta name="generator" content="MATLAB 9.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2017-05-02"><meta name="DC.source" content="P3.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+
+
+
+  </style></head><body><div class="content"><h1>Final Project by Joseph Martinsen</h1><!--introduction--><p>Math 308-510 - Dr. Pilant</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Case 1</a></li><li><a href="#2">Case 2</a></li><li><a href="#3">Case 3</a></li><li><a href="#3">Conclution</a></li></ul></div><h2 id="1">Case 1</h2><pre class="codeinput">clear;
+close <span class="string">all</span>;
+clc;
+
+<span class="comment">% Constents</span>
+g  = 32;
+m1 = 2;
+m2 = 1;
+L1 = 1;
+L2 = 2;
+
+fprintf(<span class="string">'For case 1, the following inital values are used\nm1 = 2\n'</span>)
+fprintf(<span class="string">'m2 = 1\nL1 = 1\nL2 = 2\nu1 = 1.57\nu1prime = 0\nv1 = 3.14\nv1prime = 0'</span>)
+
+u1       = 1.57;
+u1_prime = 0;
+v1       = 3.14;
+v1_prime = 0;
+
+<span class="comment">% Solve Differential Equation</span>
+options = odeset(<span class="string">'AbsTol'</span>,1e-6,<span class="string">'RelTol'</span>,1e-6);
+[t,y]= ode45(<span class="string">'pend_func'</span> , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+<span class="comment">% Potential Energy</span>
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+<span class="comment">% Kinetic Energy</span>
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+<span class="comment">% Total Energy</span>
+E=PE+KE;
+
+<span class="comment">% Position Values</span>
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+<span class="comment">% Plots</span>
+plot(x, yplot);
+ axis([-3 3 -3 2])
+title(<span class="string">'Double Pendulum'</span>)
+figure;
+plot(t,y(:,1));
+title(<span class="string">'Theta 1 vs Time'</span>)
+figure;
+plot(t,y(:,3));
+title(<span class="string">'Theta 2 vs Time'</span>)
+figure;
+plot(t,PE);
+title(<span class="string">'Potential Energy'</span>)
+figure;
+plot(t,KE);
+title(<span class="string">'Kinetic Energy'</span>)
+figure;
+plot(t,E);
+title(<span class="string">'Total Energy'</span>)
+figure;
+plot(t,E);
+title(<span class="string">'Total Energy'</span>)
+axis([0 100 0 100])
+
+fprintf(<span class="string">'Total energy deviation %f %% \n'</span>, 100*(max(E)-min(E))/(max(E)))
+</pre><pre class="codeoutput">For case 1, the following inital values are used
+m1 = 2
+m2 = 1
+L1 = 1
+L2 = 2
+u1 = 1.57
+u1prime = 0
+v1 = 3.14
+v1prime = 0Total energy deviation 0.022006 % 
+</pre><img vspace="5" hspace="5" src="P3_01.png" alt=""> <img vspace="5" hspace="5" src="P3_02.png" alt=""> <img vspace="5" hspace="5" src="P3_03.png" alt=""> <img vspace="5" hspace="5" src="P3_04.png" alt=""> <img vspace="5" hspace="5" src="P3_05.png" alt=""> <img vspace="5" hspace="5" src="P3_06.png" alt=""> <img vspace="5" hspace="5" src="P3_07.png" alt=""> <h2 id="2">Case 2</h2><pre class="codeinput">clear;
+clc;
+
+<span class="comment">% Constents</span>
+g  = 32;
+m1 = 2;
+m2 = 1;
+L1 = 1;
+L2 = 2;
+
+fprintf(<span class="string">'For case 2, the angles will differ from Case 1.\n'</span>)
+fprintf(<span class="string">'The following inital values are used\nm1 = 2\n'</span>)
+fprintf(<span class="string">'m2 = 1\nL1 = 1\nL2 = 2\nu1 = 2\nu1prime = 0\nv1 = 1\nv1prime = 0'</span>)
+
+u1       = 2;
+u1_prime = 0;
+v1       = 1;
+v1_prime = 0;
+
+<span class="comment">% Solve Differential Equation</span>
+options = odeset(<span class="string">'AbsTol'</span>,1e-6,<span class="string">'RelTol'</span>,1e-6);
+[t,y]= ode45(<span class="string">'pend_func'</span> , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+<span class="comment">% Potential Energy</span>
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+<span class="comment">% Kinetic Energy</span>
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+<span class="comment">% Total Energy</span>
+E=PE+KE;
+
+<span class="comment">% Position Values</span>
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+<span class="comment">% Plots</span>
+plot(x, yplot);
+title(<span class="string">'Double Pendulum'</span>)
+figure;
+plot(t,y(:,1));
+title(<span class="string">'Theta 1 vs Time'</span>)
+figure;
+plot(t,y(:,3));
+title(<span class="string">'Theta 2 vs Time'</span>)
+figure;
+plot(t,PE);
+title(<span class="string">'Potential Energy'</span>)
+figure;
+plot(t,KE);
+title(<span class="string">'Kinetic Energy'</span>)
+figure;
+plot(t,E);
+title(<span class="string">'Total Energy'</span>)
+figure;
+plot(t,E);
+title(<span class="string">'Total Energy'</span>)
+axis([0 100 0 100])
+
+fprintf(<span class="string">'Total energy deviation %f %% \n'</span>, 100*(max(E)-min(E))/(max(E)))
+</pre><pre class="codeoutput">For case 2, the angles will differ from Case 1.
+The following inital values are used
+m1 = 2
+m2 = 1
+L1 = 1
+L2 = 2
+u1 = 2
+u1prime = 0
+v1 = 1
+v1prime = 0Total energy deviation 0.076580 % 
+</pre><img vspace="5" hspace="5" src="P3_08.png" alt=""> <img vspace="5" hspace="5" src="P3_09.png" alt=""> <img vspace="5" hspace="5" src="P3_10.png" alt=""> <img vspace="5" hspace="5" src="P3_11.png" alt=""> <img vspace="5" hspace="5" src="P3_12.png" alt=""> <img vspace="5" hspace="5" src="P3_13.png" alt=""> <img vspace="5" hspace="5" src="P3_14.png" alt=""> <h2 id="3">Case 3</h2><pre class="codeinput">clear;
+clc;
+
+<span class="comment">% Constents</span>
+g  = 32;
+m1 = 1.5;
+m2 = 1;
+L1 = 1;
+L2 = 1.5;
+
+fprintf(<span class="string">'For case 3, the mass and length differ from Case 1.\n'</span>)
+fprintf(<span class="string">'The following inital values are used\nm1 = 1.5\n'</span>)
+fprintf(<span class="string">'m2 = 1\nL1 = 1\nL2 = 1.5\nu1 = 1\nu1prime = 0\nv1 = 3\nv1prime = 0'</span>)
+
+u1       = 1;
+u1_prime = 0;
+v1       = 3;
+v1_prime = 0;
+
+<span class="comment">% Solve Differential Equation</span>
+options = odeset(<span class="string">'AbsTol'</span>,1e-6,<span class="string">'RelTol'</span>,1e-6);
+[t,y]= ode45(<span class="string">'pend_func'</span> , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+<span class="comment">% Potential Energy</span>
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+<span class="comment">% Kinetic Energy</span>
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+<span class="comment">% Total Energy</span>
+E=PE+KE;
+
+<span class="comment">% Position Values</span>
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+<span class="comment">% Plots</span>
+plot(x, yplot);
+title(<span class="string">'Double Pendulum'</span>)
+figure;
+plot(t,y(:,1));
+title(<span class="string">'Theta 1 vs Time'</span>)
+figure;
+plot(t,y(:,3));
+title(<span class="string">'Theta 2 vs Time'</span>)
+figure;
+plot(t,PE);
+title(<span class="string">'Potential Energy'</span>)
+figure;
+plot(t,KE);
+title(<span class="string">'Kinetic Energy'</span>)
+</pre><pre class="codeoutput">For case 3, the mass and length differ from Case 1.
+The following inital values are used
+m1 = 1.5
+m2 = 1
+L1 = 1
+L2 = 1.5
+u1 = 1
+u1prime = 0
+v1 = 3
+v1prime = 0</pre><img vspace="5" hspace="5" src="P3_15.png" alt=""> <img vspace="5" hspace="5" src="P3_16.png" alt=""> <img vspace="5" hspace="5" src="P3_17.png" alt=""> <img vspace="5" hspace="5" src="P3_18.png" alt=""> <img vspace="5" hspace="5" src="P3_19.png" alt=""> 
+
+<h2>Conclution</h2>
+<p class="lead">
+	In the words of  Edward Lorenz, "Chaos [is] when the present determines the future, but 
+	the approximate present does not approximately determine the future.“<sup>1</sup> Even though the double
+	pendelum is chaotic and appears to be random, the amazing thing about math and physics is that
+	with enough initial conditions, the path the pendulum will travel can be
+	determined and graphed and simulated.
+</p>
+<p class="footer">1 | From http://fouriestseries.tumblr.com/post/86253333743/chaos-and-the-double-pendulum<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016b</a><br></p></div>
+
+<!--
+##### SOURCE BEGIN #####
+%% Final Project by Joseph Martinsen
+% Math 308-510 - Dr. Pilant
+
+%% Case 1
+clear;
+close all;
+clc;
+
+% Constents
+g  = 32;
+m1 = 2;
+m2 = 1;
+L1 = 1;
+L2 = 2;
+
+fprintf('For case 1, the following inital values are used\nm1 = 2\n')
+fprintf('m2 = 1\nL1 = 1\nL2 = 2\nu1 = 1.57\nu1prime = 0\nv1 = 3.14\nv1prime = 0')
+
+u1       = 1.57;
+u1_prime = 0;
+v1       = 3.14;
+v1_prime = 0;
+
+% Solve Differential Equation
+options = odeset('AbsTol',1e-6,'RelTol',1e-6);
+[t,y]= ode45('pend_func' , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+% Potential Energy
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+% Kinetic Energy
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+% Total Energy
+E=PE+KE;
+
+% Position Values
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+% Plots
+plot(x, yplot);
+ axis([-3 3 -3 2])
+title('Double Pendulum')
+figure;
+plot(t,y(:,1));
+title('Theta 1 vs Time')
+figure;
+plot(t,y(:,3));
+title('Theta 2 vs Time')
+figure;
+plot(t,PE);
+title('Potential Energy')
+figure;
+plot(t,KE);
+title('Kinetic Energy')
+figure;
+plot(t,E);
+title('Total Energy')
+figure;
+plot(t,E);
+title('Total Energy')
+axis([0 100 0 100])
+
+fprintf('Total energy deviation %f %% \n', 100*(max(E)-min(E))/(max(E)))
+
+%% Case 2
+clear;
+clc;
+
+% Constents
+g  = 32;
+m1 = 2;
+m2 = 1;
+L1 = 1;
+L2 = 2;
+
+fprintf('For case 2, the angles will differ from Case 1.\n')
+fprintf('The following inital values are used\nm1 = 2\n')
+fprintf('m2 = 1\nL1 = 1\nL2 = 2\nu1 = 2\nu1prime = 0\nv1 = 1\nv1prime = 0')
+
+u1       = 2;
+u1_prime = 0;
+v1       = 1;
+v1_prime = 0;
+
+% Solve Differential Equation
+options = odeset('AbsTol',1e-6,'RelTol',1e-6);
+[t,y]= ode45('pend_func' , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+% Potential Energy
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+% Kinetic Energy
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+% Total Energy
+E=PE+KE;
+
+% Position Values
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+% Plots
+plot(x, yplot);
+title('Double Pendulum')
+figure;
+plot(t,y(:,1));
+title('Theta 1 vs Time')
+figure;
+plot(t,y(:,3));
+title('Theta 2 vs Time')
+figure;
+plot(t,PE);
+title('Potential Energy')
+figure;
+plot(t,KE);
+title('Kinetic Energy')
+figure;
+plot(t,E);
+title('Total Energy')
+figure;
+plot(t,E);
+title('Total Energy')
+axis([0 100 0 100])
+
+fprintf('Total energy deviation %f %% \n', 100*(max(E)-min(E))/(max(E)))
+
+%% Case 3
+clear;
+clc;
+
+% Constents
+g  = 32;
+m1 = 1.5;
+m2 = 1;
+L1 = 1;
+L2 = 1.5;
+
+fprintf('For case 3, the mass and length differ from Case 1.\n')
+fprintf('The following inital values are used\nm1 = 1.5\n')
+fprintf('m2 = 1\nL1 = 1\nL2 = 1.5\nu1 = 1\nu1prime = 0\nv1 = 3\nv1prime = 0')
+
+u1       = 1;
+u1_prime = 0;
+v1       = 3;
+v1_prime = 0;
+
+% Solve Differential Equation
+options = odeset('AbsTol',1e-6,'RelTol',1e-6);
+[t,y]= ode45('pend_func' , [ 0 100], [ u1 ; u1_prime ; v1 ; v1_prime ],options);
+
+% Potential Energy
+PE = -(m1+m2)*g*L1*cos(y(:,1))-m2*g*L2*cos(y(:,3));
+% Kinetic Energy
+KE = 1/2*m1*L1.^2*y(:,2).^2 + 0.5*m2*(L1.^2*y(:,2).^2+L2.^2*y(:,4).^2 + 2* L1*L2*y(:,2).*y(:,4).*cos(y(:,1)-y(:,3)));
+
+% Total Energy
+E=PE+KE;
+
+% Position Values
+x = L1* sin( y(:,1)) + L2*sin(y(:,3));
+yplot = -L1* cos(y(: ,1)) - L2*cos(y(:,3));
+
+% Plots
+plot(x, yplot);
+title('Double Pendulum')
+figure;
+plot(t,y(:,1));
+title('Theta 1 vs Time')
+figure;
+plot(t,y(:,3));
+title('Theta 2 vs Time')
+figure;
+plot(t,PE);
+title('Potential Energy')
+figure;
+plot(t,KE);
+title('Kinetic Energy')
+
+##### SOURCE END #####
+--></body></html>
